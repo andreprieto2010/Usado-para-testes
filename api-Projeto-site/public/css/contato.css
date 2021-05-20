@@ -1,0 +1,741 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+input,
+textarea {
+    font-family: "Poppins", sans-serif;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: #ffffff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    width: 100%;
+    max-width: 820px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-form{
+    background-color:#00959B;
+    position: relative;
+}
+
+.circle{
+    border-radius: 50%;
+    background: linear-gradient(135deg, transparent 20%, #00959B);
+    position: absolute;
+}
+
+.circle.one{
+    width: 130px;
+    height: 130px;
+    top: 130px;
+    right: -40px;
+}
+
+.circle.two{
+    width: 80px;
+    height: 80px;
+    top: 10px;
+    right: 30px;
+}
+
+.contact-form:before{
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background-color: #00959B;
+    transform: rotate(45deg);
+    top: 50px;
+    left: -13px;
+}
+
+
+/* cartao contato */
+
+form {
+    padding: 2.3rem 2.2rem;
+    z-index: 10; /* especifica a ordem da pilha de um elemento do anúncio. */
+    overflow: hidden; /* Corta o conteúdo que ultrapassa o tamanho da DIV.  */
+    position: relative; /* relative posiciona o elemento em relação a si mesmo */
+  }
+
+  .title {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-bottom: 0.7rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+  }
+  
+  .input-container {
+    position: relative;
+    margin: 1rem 0;
+  }
+  
+  .input {
+    width: 100%;
+    outline: none;
+    border: 1px solid #ccc;
+    background: none;
+    padding: 1rem;
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    border-radius: 1.5rem; /* destina-se a definir bordas arredondadas.  */
+    transition: 0.3s; /*ela permite definir a transição entre dois estados de um elemento*/
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  textarea.input {
+    padding: 0.8rem 1.2rem;
+    min-height: 150px;
+    border-radius: 22px;
+    resize: none; /*Nao permite que o usuario altere suas dimensoes*/
+    overflow-y: auto;
+  }
+  
+  .input-container label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%); /*Permite modificar o espaço da coordenada Y*/
+    padding: 0 0.4rem;
+    color: #fafafa;
+    font-size: 0.9rem;
+    font-weight: 400;
+    pointer-events: none;
+    z-index: 1000;
+    transition: 0.5s;
+  }
+     
+  /* mudando o input da area de mensagem*/
+  .input-container.textarea label {
+    top: 1rem;
+    transform: translateY(0);
+  }
+
+
+    /* botao enviar*/
+  .btn {
+  
+    padding: 0.6rem 1.3rem;
+    background-color:#03313D ;
+    border: 2px solid #03313D;
+    width: 150px;
+    font-size: 0.95rem;
+    color: white;
+    line-height: 1; /*comprimento da linha*/
+    border-radius: 50px;
+    outline: none; /*Tira a linha*/
+    cursor: pointer;
+    transition: 0.3s; /*animation*/
+    margin: 0;
+
+  }
+ 
+  /*O atributo hover é aquele usado quando passamos o cursor do mouse, mudando o botao*/
+  .btn:hover {
+    background-color: transparent;
+    color: #03313D;
+  }
+
+  /* animaçao dentro dos campos*/
+  .input-container span {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    padding: 0 0.4rem;
+    color: transparent;
+    pointer-events: none;
+    z-index: 500;
+  }
+      
+  /* 4
+
+Os pseudo-elementos ::before e ::afterfuncionam da mesma forma e trabalham em parceria com uma propriedade chamada content.
+ O ::beforepseudoelemento pode ser usado para inserir algum conteúdo antes do conteúdo de um elemento. 
+ O ::afterpseudoelemento pode ser usado para inserir algum conteúdo após o conteúdo de um elemento.*/
+  .input-container span:before,
+  .input-container span:after {
+    content: "";
+    position: absolute;
+    width: 10%;
+    opacity: 0;
+    transition: 0.3s;
+    height: 5px;
+    background-color: #1abc9c;
+    top: 50%;
+    transform: rotateY(-50%);
+
+    }
+
+    .input-container span:before {
+      left: 50%;
+    }
+
+    .input-container span:after {
+      right: 50%;
+    } 
+    
+    /*Focus ocorre quando o mouse tem interaçao com o input. usaremos js para a animaçao.*/
+    .input-container.focus label {
+      top: 0;
+      transform: translateY(-50%);
+      left: 25px;
+      font-size: 0.8rem;
+    }
+
+   .input-container.focus span:before,
+   .input-container.focus span:after {
+     width: 50%;
+     opacity: 1;
+   }
+
+   /* /animaçao dos campos*/
+
+
+    /* Parte esquerda */
+
+/* imagem png*/
+.img-form {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 50px;
+ }
+
+ .contact-info {
+   padding: 2.3rem 2.2rem;
+   position: relative;
+
+ }
+
+ .contact-info .tittle {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: #24262b;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 0.7rem;
+ }
+ 
+ .text {
+   color: #333;
+   margin: 1.5rem 0 2rem 0;
+ }
+
+  /*:before cria um pseudo-elemento que é o primeiro filho do elemento atingido.
+    circulo no canto inferior */
+ .contact-info:before {
+  content: ""; /*content = mesma e atribuir um valor qualquer, para que o elemento seja criado dentro do HTML.*/
+  position: absolute;
+  width: 290px;
+  height: 120px;
+  background-color: #00959B;
+  border-radius: 75%;
+  bottom: -27px;
+  right: 240px;
+ 
+}
+
+/*segundo circulo canto inferior*/
+.info:before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 160px;
+  background-color: #00959B;
+  border-radius: 65%;
+  bottom: -30px;
+  right: 320px;
+ 
+}
+/* / parte esquerda*/
+
+/*/cartao contato*/
+
+
+/* responsividade */
+/*Media permite a renderização de conteúdo para se adaptar a diferentes condições, como a 
+resolução da tela. */
+@media (max-width: 800px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+
+.contact-info::before {
+  bottom: initial;
+  top: -75px;
+  right: 65px;
+  transform: scale(0.95);
+}
+
+.contact-form:before {
+  top: -13px;
+  left: initial;
+  right: 70x;
+}
+
+.square {
+  transform: translate(140%, 43%);
+  height: 350px;
+  
+}
+
+.big-circle {
+  bottom: 75%;
+  transform: scale(0.9) translate(-40%, 30%);
+  right: 50%;
+}
+
+.text {
+  margin: 1rem 0 1.5rem 0;
+}
+
+.info:before {
+  width: 30px;
+  height: 30px;
+}
+
+.quadrado2 span {
+  position: absolute;
+  width: 350px;
+  height: 110px;
+  left: 390px !important;
+  top: 280px;
+  color: rgba(0, 0, 0, 0.644);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+
+.quadrado2 {
+  float: right;
+  width: 195px !important;
+  height: 200px !important;
+  background: #03313D;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: -30%;
+}
+
+.quadrado1 {
+  position: absolute;
+  width: 324px !important;
+  height: 470px !important;
+  background: #c6f0f1;
+  border-top-right-radius: 100%;
+}
+
+.quadrado1 img {
+  position: absolute;
+  width: 372px !important;
+  height: 417px !important;
+  left: 7px !important;
+  top: 100px;
+}
+
+.titulo-padrao {
+  font-size: 1.5rem !important;
+  font-weight: 600;
+  display: inline-block;
+  position: absolute;
+  text-decoration: none;
+  cursor: default;
+  left: 390px !important;
+  top: 200px;
+}
+
+.div-mapa {
+  width: 800px !important;
+  margin-top: 10px !important;
+  height: 200px;
+  position: relative;
+  justify-content: center;
+}
+
+.text-move {
+  position: relative;
+  left: 6% !important;
+  float: left;
+  text-align: center;
+  width: 362px;
+}
+
+.mapa {
+  left: -10% !important;
+  width: "400";
+  height: "250";
+  border: 0;
+  position: relative;
+  float: right;
+}
+
+.footer img {
+  width: 180px !important;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 920px !important;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container2 {
+  position: relative;
+  width: 100%;
+  height: 500px !important;
+  background: #FFFFFF;
+}
+
+
+
+
+
+/* card contato */
+
+.contact-info {
+  padding: 2.3rem 2.2rem;
+  position: relative;
+  display: flex !important;
+}
+
+.texto-padrao {
+  color: rgba(0, 0, 0, 0.562);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 30px;
+  padding: 25px 0px 0px 0px !important;
+}
+}
+
+@media (max-width: 600px) {
+   .container {
+     padding: 1.5rem;
+   }
+
+
+.contact-info:before {
+    display: none;
+}
+
+.big-circle {
+  display: none;
+}
+
+form,
+.contact-info {
+  padding: 1.7rem 1.6rem;
+}
+
+.text p {
+  font-size: 0.8rem;
+}
+
+.info:before {
+  width: 30px;
+  height: 30px;
+}
+
+.tittle {
+  font-size: 1.15rem;
+}
+
+.input {
+  padding: 0.45rem 1.2rem;
+}
+
+.btn {
+  padding: 0.45rem 1.2rem;
+}
+
+
+}
+/* / responsividade */
+
+
+.container2{
+  position: relative;
+  width: 100%;
+  height: 650px;
+  background: #FFFFFF;
+}
+
+.quadrado1{
+  position: absolute;
+  width: 500px;
+  height: 550px;
+  background: #c6f0f1;
+  border-top-right-radius: 100%;
+}
+
+.quadrado1 img{
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  left: 75px;
+  top: 100px;
+}
+
+.quadrado2{
+  float: right;
+  width: 300px;
+  height: 300px;
+  background: #03313D;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: -30%;
+}
+
+.titulo-padrao{
+  font-size: 2.5rem;
+  font-weight: 600;
+  display: inline-block;
+  position: absolute;
+  text-decoration: none;
+  cursor: default;
+  left: 600px;
+  top: 200px;
+}
+
+.titulo-padrao{
+  color: rgba(0, 0, 0, 0.733);
+  transition: color 0.3s ease-in-out;
+}
+
+.titulo-padrao:before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  transition: width, background-color, 0.3s ease-in-out;
+}
+
+.titulo-padrao:hover{
+  color: #000000be;
+}
+
+.titulo-padrao:before{
+  width: 100px;
+  background-color:#00959C;
+}
+
+.titulo-padrao:hover:before{
+  width: 100%;
+  background-color:#00959C;
+}
+
+.quadrado2 span{
+  position: absolute;
+  width: 350px;
+  height: 110px;
+  left: 620px;
+  top: 280px;
+  color: rgba(0, 0, 0, 0.644);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+
+/*Mapa da localizaçao da empresa*/
+
+.div-mapa {
+  width: 100%;
+  margin-top: 100px;
+  height: 200px;
+  position: relative;
+  justify-content: center;
+
+}
+
+.mapa {
+  left: -20%;
+  width: "400";
+  height: "250";
+  border:0;
+  position: relative;
+  float: right;
+   
+}
+
+.subtitulo-padrao{
+  color:  rgba(0, 0, 0, 0.733);
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+
+}
+
+
+.texto-padrao{
+  bottom: 10%;
+  color: rgba(0, 0, 0, 0.562);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 30px;
+  white-space: pre-wrap;
+}
+
+
+.text-move {
+  position: relative;
+  left: 20%;
+  float: left;
+  text-align: center;
+}
+
+/* /Mapa da localizaçao da empresa*/
+
+
+/* todos os botões devem ter essa class */
+.btn-padrao {
+  outline:none;
+  font-family: 'Poppins', sans-serif;
+  height: 50px;
+  text-align: center;
+  width: 150px;
+  border-radius:50px;
+  letter-spacing:1px;
+  text-shadow:0;
+  font-size:12px;
+  font-weight:bold;
+  border: #ffffff00;
+  cursor: pointer;
+  }
+
+  /* classes que dão cor ao botão */
+
+
+
+
+  /* btn verde */
+  .verde {
+      background: #00959C;
+      color: white;
+      border: #00959C;
+  }
+      
+  .verde:hover {
+      background: #ffffff;
+      color: #00959C;
+      border: 2px solid #00959C;
+  }
+
+
+
+
+  /* btn amarelo */
+  .amarelo {
+      background: #FBC84F;
+      color: white;
+      border: #FBC84F;
+  }
+      
+  .amarelo:hover {
+      background: #ffffff;
+      color: #FBC84F;
+      border: 2px solid #FBC84F;
+  }
+
+
+
+
+  /* btn azul claro */
+  .azul {
+      background: #CEF1F2;
+      color: white;
+      border: #CEF1F2;
+    }
+      
+    .azul:hover {
+      background: #ffffff;
+      color: #CEF1F2;
+      border: 2px solid #CEF1F2;
+    }
+
+
+
+
+  /* btn azul marinho */
+  .marinho {
+      background: #03313D;
+      color: white;
+      border: #03313D;
+    }
+      
+    .marinho:hover {
+      background: #ffffff;
+      color: #03313D;
+      border: 2px solid #03313D;
+    }
+
+ /* fim da padronização dos botões */
+
+
+/* inicio da padronização de subtitulos (ex: missão, visão e valores) */
+  .subtitulo-padrao{
+      color:  rgba(0, 0, 0, 0.733);
+      font-family: 'Roboto', sans-serif;
+      font-size: 2rem;
+  }
+
+/* fim da padronização de subtitulos (ex: missão, visão e valores) */
+
+
+/* inicio da padronização de textos corridos */
+  .texto-padrao{
+      color: rgba(0, 0, 0, 0.562);
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      line-height: 30px;
+  }
+/* fim da padronização de textos corridos */
+

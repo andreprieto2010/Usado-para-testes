@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logoNovaReduzida.png"> <!-- icone da página (aparece na barra do navegador) -->
+    <title>Perfil | Funcionário</title> <!-- titulo da página (aparece na barra do navegador) -->
+    <link rel="stylesheet" href="perfil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+</head>
+
+<body>
+    <!-- header e lateral-->
+    <input type="checkbox" id="menu-toggle">
+    <div class="sidebar">
+        <div class="sidebar-marca">
+            <span class="sidebar-logo-reduzido"><img src="img/logoNovaReduzida.png" alt="logo friocontrol"></span>
+            <span class="sidebar-logo"><img src="img/LogoNovaBranco.png" alt="logo friocontrol"></span>
+
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="/Funcionario-Home/Funcionario-Home.html"><i class="fas fa-chart-line"></i><span>Dashboard</span></a>
+                </li>
+                <li>
+                    <a href="/Funcionario-Perfil/perfil.html" class="active"><i class="fas fa-user-circle"></i><span>Perfil</span></a>
+                </li>
+                <li>
+                    <a href="/Funcionario-Relatorio/Funcionario-Relatório.html"><i class="fas fa-clipboard-list"></i><span>Relatório</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar-menu sair">
+            <ul>
+                <li>
+                    <a href=""><i class="fas fa-sign-out-alt"></i>
+                        <span>Encerrar sessão</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="header-dashboard">
+        <header>
+            <h2>
+                <label for="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </label>
+
+                Dashboard
+            </h2>
+            <div class="search-wrapper">
+                <span class="icone-pesquisa"><img src="img/icone pesquisa.png" alt=""></span>
+                <input type="search" placeholder="Search here">
+            </div>
+            <div class="user-wrapper">
+                <img src="img/funcionario.png" width="40px" height="40px" alt="">
+                <div>
+                    <h4>Elizabette Kim</h4>
+                    <small>Funcionário</small>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- /header e lateral-->
+
+            <!--Container do perfil-->
+            <div class="container-perfil">
+                <h2 class="subtitulo-padrao">Perfil do funcionário</h2>
+                <div class="caixa-card">
+
+
+                    <h2>Foto do perfil</h2>
+                    <img class="section-img profile" src="img/funcionario perfil.png" />
+                    <p>O funcionário escolhido é responsável e designado pelo perfil da empresa.</p>
+                    <a href="#" class="info-link">Leia mais sobre nossa politica...</a>
+
+                </div>
+                <div class="caixa-input">
+                    <form action="">
+                        <p>Nome da empresa: </p>
+                        <input class="inp" type="text" class="input" placeholder="King Maker">
+                        <p>Nome do usuario responsavel:</p>
+                        <input class="inp" type="text" class="input" placeholder="Elizabette Kim">
+                        <p>Email de contato:</p>
+                        <input class="inp" type="text" class="input" placeholder="elizabettekim@gmail.com">
+
+                    </form>
+                </div>
+            </div>
+             <!-- /Container do perfil-->
+
+            <!--Container mudar senha-->
+
+            <div class="container-senha">
+                <div class="caixa-titulo">
+                    <h2 class="subtitulo-padrao">Mudar senha</h2>
+                </div>
+
+                <div class="caixa-senha">
+                    <form action="">
+
+                        <input class="inp-senha" type="text" class="input" placeholder="Senha nova">
+                        <input class="inp-senha" type="text" class="input" placeholder="Repita a senha">
+                        <input type="password" class="inp-repeat" placeholder="Senha antiga">
+                        <button class="btn-padrao amarelo">Confirmar </button>
+
+                    </form>
+                </div>
+            </div>
+           <!--/Container mudar senha-->
+
+</body>
+</html>

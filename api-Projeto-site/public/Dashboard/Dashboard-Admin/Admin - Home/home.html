@@ -1,0 +1,197 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/home-adm.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.2/chart.min.js"
+        integrity="sha512-dnUg2JxjlVoXHVdSMWDYm2Y5xcIrJg1N+juOuRi0yLVkku/g26rwHwysJDAMwahaDfRpr1AxFz43ktuMPr/l1A=="
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Header-->
+    <input type="checkbox" id="menu-toggle">
+    <div class="sidebar">
+        <div class="sidebar-marca">
+            <span class="sidebar-logo-reduzido"><img src="img/logoNovaReduzida.png" alt="logo friocontrol"></span>
+            <span class="sidebar-logo"><img src="img/LogoNovaBranco.png" alt="logo friocontrol"></span>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a class="active" href="grafico.html"><i class="fas fa-chart-line"></i><span>Dashboard</span></a>
+                </li>
+                <li>
+                    <a href="perfil.html"><i class="fas fa-user-circle"></i><span>Perfil</span></a>
+                </li>
+                <li>
+                    <a href="relatorio.html"><i class="fas fa-clipboard-list"></i><span>Relatório</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar-menu sair">
+            <ul>
+                <li>
+                    <a href=""><i class="fas fa-sign-out-alt"></i>
+                        <span>Encerrar sessão</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="header-dashboard">
+        <header>
+            <h2>
+                <label for="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </label>
+
+                Dashboard
+            </h2>
+            <div class="search-wrapper">
+                <span class="icone-pesquisa"><img src="img/icone pesquisa.png" alt=""></span>
+                <input type="search" placeholder="Search here">
+            </div>
+            <div class="user-wrapper">
+                <img src="img/etty-fidele-VNYCIbZju0o-unsplash 1.png" width="40px" height="40px" alt="">
+                <div>
+                    <h4>Christian Malik</h4>
+                    <small>Super Admin</small>
+                </div>
+            </div>
+        </header>
+        <!--  /Header-->
+
+        <main>
+
+
+
+            <!--------------------------------------------------------------------- 3 cards no começo --------------------------------------------------------------------------->
+            <div class="cards">
+
+                <!-- card 1 -->
+                <div class="card">
+                    <div class="align-items">
+                        <div class="desc-count">
+                            <h1 class="count">500</h1>
+                            <p>Empresas</p>
+                        </div>
+                        <div>
+                            <img class="sensor" src="img/empresa 1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card 2 -->
+                <div class="card">
+                    <div class="align-items">
+                        <div class="desc-count">
+                            <h1 class="count">600</h1>
+                            <p>Usuarios</p>
+                        </div>
+                        <div>
+                            <img class="camera" src="img/man-user 1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card 3 -->
+                <div class="card">
+                    <div class="align-items">
+                        <div class="desc-count">
+                            <h1 class="count">200</h1>
+                            <p>Vendas hoje</p>
+                        </div>
+                        <div>
+                            <img class="termometro" src="img/vendas 1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!------------------------------------------------------------------------- fim cards -------------------------------------------------------------------->
+
+
+
+
+            <!------------------------------------------------------------------- inicio da barra de busca (ADM) ------------------------------------------------------------------------------>
+            <div class="barra-navegacao-home">
+                <!-- input de pesquisa -->
+                <div class="barra-busca-home centralizando ">
+                    <div class="search-wrapper2">
+                        <input type="search" placeholder="Filtrar por empresa, região e usúario">
+                        <span class="icone-pesquisa"><img src="img/icone pesquisa.png" alt=""></span>
+                    </div>
+                </div>
+            </div>
+            <!--------------------------------------------------------------------- fim da barra de busca (ADM)------------------------------------------------------------------------------>
+
+
+
+            <!---------------------------------------------------------------------- inicio do gráfico --------------------------------------------------------------------------------->
+            <div class="grafico-analise">
+                <button class="btn-padrao verde"> Descrição </button>
+                <div class="desc-grafico desc-verde">
+                    <p> Aumento das vendas dos nossos planos neste mes. </p>
+                </div>
+                <div class="centralizando">
+                    <div class="grafico-analise1">
+
+                        <section style="width:100%; height: 50%;">
+                            <canvas id="vendas" style="height: 340px; width: 900px;"></canvas>
+                            <section>
+                    </div>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------- fim do gráfico ------------------------------------------------------------------------------------>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!--Grafico usuario-->
+            <div class="container-usuario">
+                <div class="caixa-usuario">
+                    <button class="btn-padrao verde"> Descrição </button>
+                    <div class="desc-grafico desc-verde">
+                        <p> Usuarios cadastrados no sistema nos ultimos meses. </p>
+                    </div>
+                    <div class="caixa-conteudo">
+                        <canvas id="usuarios"  class="grafico-canva"></canvas>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Grafico empresa-->
+            <div class="container-empresa">
+                <div class="caixa-empresa">
+                    <button class="btn-padrao verde"> Descrição </button>
+                    <div class="desc-grafico desc-verde">
+                        <p> Aumento das vendas dos nossos planos neste mes. </p>
+                    </div>
+                    <div class="caixa-conteudo">
+
+                        <canvas id="empresas" class="grafico-canva"></canvas>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
+
+<script src="home-adm.js"></script>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="img/logoNovaReduzida.png"> <!-- icone da página (aparece na barra do navegador) -->
+        <title>Home | Empresa</title> <!-- titulo da página (aparece na barra do navegador) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+        <link rel="stylesheet" href="css/header-padrao-empresa.css"> <!-- linkando css da header e sidebar -->
+        <link rel="stylesheet" href="css/home-empresa.css"> <!-- linkando o css exclusivo dos componentes da página home - Empresa -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet"> <!-- link das fontes usadas no site Roboto(titulos) e Poppins(descrições) -->
+
+    </head>
+    <body>
+    <!---------------------------------------------------------------- inicio da sidebar (menu lateral) ----------------------------------------------------------------------------->
+    <input type="checkbox" id="menu-toggle">
+        <div class="sidebar">
+
+            <div class="sidebar-marca">
+                <span class="sidebar-logo-reduzido"><img src="img/logoNovaReduzidaBranca.png" alt="logo friocontrol"></span>            
+                <span class="sidebar-logo"><img src="img/LogoNovaBranco.png" alt="logo friocontrol"></span>
+            </div>
+
+            <div class="sidebar-menu">
+                <ul>
+                    <li>
+                        <a class="active" href="grafico.html"><i class="fas fa-chart-line"></i><span>Dashboard</span></a>
+                    </li>
+
+                    <li>
+                        <a href="perfil.html"><i class="fas fa-user-circle"></i><span>Perfil</span></a>
+                    </li>
+
+                    <li>
+                        <a href="relatorio.html"><i class="fas fa-clipboard-list"></i><span>Relatório</span></a>
+                    </li>
+                </ul>              
+            </div>
+
+            <div class="sidebar-menu sair">
+                <ul>
+                    <li>
+                        <a href=""><i class="fas fa-sign-out-alt"></i>
+                            <span>Encerrar sessão</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!------------------------------------------------------------------ fim da sidebar (menu lateral) ----------------------------------------------------------------->
+
+        <!----------------------------------------------------------------- inicio do header (menu do topo) ---------------------------------------------------------------->
+        <div class="header-dashboard">
+        <header>
+                <h2>
+                    <label for="menu-toggle"><i class="fas fa-bars"></i></label>
+                    Dashboard
+                </h2>
+                
+                <div class="search-wrapper">
+                    <span class="icone-pesquisa"><img src="img/icone pesquisa.png" alt=""></span>
+                    <input type="search" placeholder="Busque aqui">
+                </div>
+
+                <div class="user-wrapper">
+                    <img src="img/logo-empresa.png" width="40px" height="40px" alt="">
+                    <div>
+                        <h4>King Master</h4>
+                        <small>Empresa</small>
+                    </div>
+                </div>
+        </header>
+        <!-- fim do header (menu do topo) -->
+
+        <main>
+
+        <!--------------------------------------------------------------------- 3 cards no começo --------------------------------------------------------------------------->
+            <div class="cards">
+
+                <!-- card 1 -->
+                <div class="card">
+                    <div class="align-items">
+                        <div class="desc-count">
+                            <h1 class="count">60</h1>
+                            <p>Sensores</p>
+                        </div>
+                        <div>
+                            <img class="sensor" src="img/sensor.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card 2 -->
+                <div class="card">
+                    <div class="align-items">
+                        <div class="desc-count">
+                            <h1 class="count">20</h1>
+                            <p>funcionários</p>
+                        </div>
+                        <div>
+                            <img class="camera" src="img/funcionarios.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card 3 -->
+                <div class="card">
+                    <div class="align-items">
+                        <div class="desc-count">
+                            <h1 class="count">15</h1>
+                            <p>Viagens</p>
+                        </div>
+                        <div>
+                            <img class="termometro" src="img/Viagem.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!------------------------------------------------------------------------- fim cards -------------------------------------------------------------------->
+
+            <!----------------------------------------------------------------------- inicio notificações ------------------------------------------------------------->
+            <div class="scroll">
+                <button class="btn-padrao verde"> Notificações </button>
+                    <section class="container-notificacoes column-notificacoes">
+
+                        <!-- card notificações -->
+                        <div class="item-notificacoes">
+                            <!-- data notificação -->
+                            <p class="data-notificacao">17/04/2021</p> 
+
+                            <!-- titulo e descrição da notificação -->
+                            <div style="text-align: start;">
+                                <h2 class="titulo-notificacao vermelho-notif">Importante!</h2>
+                                <p class="msg-notificacao">Freezer 21 está perto de atingir a temperatura minima exigida para o produto.</p>
+                            </div>
+
+                            <!-- link para visualizar o gráfico -->
+                            <span class="link-notificacao">Visualizar Gráfico</span>
+                        </div>
+                        <!-- fim card notificações -->
+                        
+
+                        <!-- card notificações -->
+                        <div class="item-notificacoes">
+                            <!-- data notificação -->
+                            <p class="data-notificacao">17/04/2021</p>
+
+                            <!-- titulo e descrição da notificação -->
+                            <div style="text-align: start;">
+                                <h2 class="titulo-notificacao amarelo-notif">Viagem Iniciada</h2>
+                                <p class="msg-notificacao">Freezer 05 está saindo de São Paulo em direção ao Rio de Janeiro.</p>
+                            </div>
+
+                            <!-- link para visualizar o gráfico -->
+                            <span class="link-notificacao">Visualizar Gráfico</span>
+                        </div>
+                        <!-- fim card notificações -->
+
+
+                        <!-- card notificações -->
+                        <div class="item-notificacoes">
+                            <!-- data notificação -->
+                            <p class="data-notificacao">15/04/2021</p>
+
+                            <!-- titulo e descrição da notificação -->
+                            <div style="text-align: start;">
+                                <h2 class="titulo-notificacao verde-notif">Viagem Finalizada</h2>
+                                <p class="msg-notificacao">Freezer 38 chegou ao seu destino final: Minas Gerais.</p>
+                            </div>
+
+                            <!-- link para visualizar o gráfico -->
+                            <span class="link-notificacao">Visualizar Gráfico</span>
+                        </div>
+                        <!-- fim card notificações -->
+
+                        <!-- card notificações -->
+                        <div class="item-notificacoes">
+                            <!-- data notificação -->
+                            <p class="data-notificacao">14/04/2021</p>
+
+                            <!-- titulo e descrição da notificação -->
+                            <div style="text-align: start;">
+                                <h2 class="titulo-notificacao vermelho-notif">Importante!</h2>
+                                <p class="msg-notificacao">Freezer 21 está perto de atingir a temperatura minima exigida para o produto.</p>
+                            </div>
+
+                            <!-- link para visualizar o gráfico -->
+                            <span class="link-notificacao">Visualizar Gráfico</span>
+                        </div>
+                        <!-- fim card notificações -->
+
+                        <!-- card notificações -->
+                        <div class="item-notificacoes">
+                            <!-- data notificação -->
+                            <p class="data-notificacao">13/04/2021</p>
+
+                            <!-- titulo e descrição da notificação -->
+                            <div style="text-align: start;">
+                                <h2 class="titulo-notificacao amarelo-notif">Viagem Iniciada</h2>
+                                <p class="msg-notificacao">Freezer 05 está saindo de São Paulo em direção ao Rio de Janeiro.</p>
+                            </div>
+
+                            <!-- link para visualizar o gráfico -->
+                            <span class="link-notificacao">Visualizar Gráfico</span>
+                        </div>
+                        <!-- fim card notificações -->
+
+                        <!-- card notificações -->
+                        <div class="item-notificacoes">
+                            <!-- data notificação -->
+                            <p class="data-notificacao">09/04/2021</p>
+
+                            <!-- titulo e descrição da notificação -->
+                            <div style="text-align: start;">
+                                <h2 class="titulo-notificacao verde-notif">Viagem Finalizada</h2>
+                                <p class="msg-notificacao">Freezer 38 chegou ao seu destino final: Minas Gerais.</p>
+                            </div>
+
+                            <!-- link para visualizar o gráfico -->
+                            <span class="link-notificacao">Visualizar Gráfico</span>
+                        </div>
+                        <!-- fim card notificações -->
+
+
+                    </section>
+                </div>
+            <!-------------------------------------------------------------------- fim notificações ---------------------------------------------------------------------------------->
+
+            <!------------------------------------------------------------------- inicio da barra de busca ------------------------------------------------------------------------------>
+            <div class="barra-navegacao-home">
+                <!-- input de pesquisa -->
+                <div class="barra-busca-home centralizando" style="margin-right: 10px;">
+                    <div class="search-wrapper2">
+                        <input type="search" placeholder="Filtrar por região e usúario">
+                        <span class="icone-pesquisa"><img src="img/icone pesquisa.png" alt=""></span>
+                    </div>
+                </div>
+
+                <!-- select de freezers -->
+                <div class="select-busca-home">
+                    <div class="centralizando tam-select">
+                        <div class="select">
+                            <select name="slct" id="slct">
+                            <option selected disabled>Selecione um Freezer</option>
+                            <option value="">Freezer 1</option>
+                            <option value="">Freezer 2</option>
+                            <option value="">Freezer 3</option>
+                            <option value="">Freezer 4</option>
+                            <option value="">Freezer 5</option>
+                            <option value="">Freezer 6</option>
+                            <option value="">Freezer 7</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--------------------------------------------------------------------- fim da barra de busca ------------------------------------------------------------------------------>
+
+
+            <!---------------------------------------------------------------------- inicio do gráfico --------------------------------------------------------------------------------->
+            <div class="grafico-analise">
+                <button class="btn-padrao verde">Freezer</button>
+                <div class="desc-grafico desc-verde">
+                   <p> Gráfico com as informações de temperatura do freezer 00, informações obtidas por segundo </p>
+                </div>
+                                <div class="centralizando">
+                                <div class="grafico-analise1">
+                                
+                                <section style="width:100%; height: 50%;">
+                                    <canvas id="chart"></canvas>
+                            <section>
+                            </div>
+                    </div>
+                </div>
+         
+            <!--------------------------------------------------------------------- fim do gráfico ------------------------------------------------------------------------------------>
+
+            <!------------------------------------------------------ inicio do gráfico menor e perfil funcionário --------------------------------------------------------------------->
+            <div class="divs">
+                <section class="container-divs row-wrap-divs">
+
+                    <!-- grafico viagens -->
+                    <button class="btn-padrao verde"> Viagens </button>
+                    <div class="item-divs">     
+                        <div class="desc-grafico desc-verde">
+                            <p> Gráfico com as informações de transportes do freezer 00, informações obtidas por segundo </p>
+                         </div>
+                        <div class="container-chart2">
+                            <div>
+                              <canvas id="canvass"></canvas>
+                            </div>
+                          </div>
+                    </div>
+                    
+                    <!-- grafico viagens -->
+                   
+                    <div class="item-divs perfil-func" style="margin-left: 10px;">
+                        <div class="fundo-verde">
+                        <button class="btn-padrao verde"> Responsavel </button>
+                        <div class="img-func">
+                            <img src="./img/funcionario.png" alt="">
+                            <h2 class="nome-func">Elizabette Kim</h2>
+                        </div>
+
+                        <!-- descrição funcionario -->
+                        <div class="desc-infos ">
+                            <img src="./img/team.png" alt="">
+                            <span class="desc-func">Cargo:</span>
+                            <span class="dados-func">Gerente</span>
+                        </div>
+
+                        <!-- descrição funcionario -->
+                        <div class="desc-infos ">
+                            <img src="./img/telephone.png" alt="">
+                            <span class="desc-func">Telefone:</span>
+                            <span class="dados-func">(11) 99874-5874</span>
+                        </div>
+
+                        <!-- descrição funcionario -->
+                        <div class="desc-infos" style="padding-bottom: 30px;">
+                            <img src="./img/freezer.png" alt="">
+                            <span class="desc-func">N° Freezers:</span>
+                            <span class="dados-func">5</span>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+            </div>
+        </main>  
+</body>
+</html>
+
+<script>
+
+    var context = document.getElementById("chart").getContext("2d");
+    context.canvas.width = 1000;
+    context.canvas.height = 250;
+    
+    var configuration = {
+        type: 'line',
+        data: {
+            datasets: [{
+                label: "Temperatura x Tempo",
+                type: 'line',
+                borderColor: ['#0a6166'],
+                backgroundColor: ['#0F969D']
+            }]
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                    //type: 'value',
+                    distribution: 'series',
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }],
+                yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Temperature'
+                    },
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+            },
+            animation: {
+                duration: 0
+            }
+        }
+    };
+    
+    var chart = new Chart(context, configuration);
+
+    //Função para obter os dados de temperatura do server
+    //Seria mais interessante fazer isso com WebSocket, porém para fins academicos, os dados serão atualizados via HTTP
+    
+    //Esse atributo dentro do contexto serve para saber qual foi o último índice processado, assim eliminado os outros elementos na
+    //hora de montar/atualizar o gráfico
+    this.lastIndexTemp = 0;
+    this.time = 0;
+
+    function get_data(){
+
+        var http = new XMLHttpRequest();
+        http.open('GET', 'http://localhost:3000/api', false);
+        http.send(null);        
+        
+        var obj = JSON.parse(http.responseText);
+        if (obj.data.length == 0){
+            return;
+        }
+
+        var _lastIndexTemp = this.lastIndexTemp;
+        this.lastIndexTemp = obj.data.length;
+        listTemp = obj.data.slice(_lastIndexTemp);
+
+        listTemp.forEach(data => {
+            //Máximo de 60 itens exibidos no gráfico
+            if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10){
+                chart.data.labels.shift();
+                chart.data.datasets[0].data.shift();
+            }
+
+            chart.data.labels.push(this.time++);
+            chart.data.datasets[0].data.push(parseFloat(data));
+            chart.update();
+        });
+        
+        document.getElementById('average').textContent = obj.average;
+        document.getElementById('averageHour').textContent = obj.averageHour;
+    } 
+
+    setInterval(() => {
+			get_data();
+        }, 1000);
+    </script>
+
+
+    <script>
+       var ctx = canvass.getContext('2d');
+  
+  var viagem = new Chart(ctx, {
+    type: 'bar',
+    data: {
+          labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'],
+          datasets: [{
+              data: [10, 15, 25, 20, 35],
+              backgroundColor:"#00959C",
+              borderColor: "#00959C",
+              borderWidth: 1
+          }]
+      },
+      options: {
+      }
+  });
+
+</script>

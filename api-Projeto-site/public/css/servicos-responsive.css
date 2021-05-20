@@ -1,0 +1,146 @@
+.titulo-padrao{
+  font-size: 3rem;
+  font-weight: 600;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  cursor: default;
+}
+
+.titulo-padrao{
+  color: rgba(0, 0, 0, 0.733);
+  transition: color 0.3s ease-in-out;
+}
+
+.titulo-padrao:before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  transition: width, background-color, 0.3s ease-in-out;
+}
+
+.titulo-padrao:hover{
+  color: #000000be;
+}
+
+.titulo-padrao:before{
+  width: 100px;
+  background-color:#00959C ;
+}
+
+.titulo-padrao:hover:before{
+  width: 100%;
+  background-color:#00959C ;
+}
+.texto-padrao{
+  color: rgba(0, 0, 0, 0.562);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+.conteudo{
+  height: 300px;
+  background-color: #03313d;
+}
+.conteudo h1{
+  color:#cef1f2 ;
+}
+.container-servicos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-servicos > *:nth-child(1) {
+  flex: 1 1 60%;
+  align-items: center;
+  min-width: 25ch;
+  padding-left: 5%;
+  margin-top: 15px 0;
+}
+
+.container-servicos > *:nth-child(2) {
+  flex: 1 1 40%;
+  min-width: 15ch;
+
+}
+
+.container-servicos > *:nth-child(2) img {
+width: 310px;
+
+}
+.comoFunciona{
+  margin: 5%;
+  height: 360px;
+}
+
+.servicoPrincipal .divcaixa{
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 5%;
+} 
+.divfacil{
+  max-width: 33,33%;}
+.facil{
+    height: 301px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    line-height: 60px;
+    padding: 40px 0 10px 0; 
+}
+.divrapido{
+  max-width: 33,33%;
+  padding: 0 15px;
+
+}
+ .rapido{
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  padding: 40px 0 10px 0; 
+
+}
+#graficoCelular{
+width: 228px; 
+padding: 40px;
+
+}.divseguro{
+  max-width: 33,33%;
+}
+.seguro{
+    height: 228px;
+    font-family:'Poppins', sans-serif;
+    font-size: 24px;
+    line-height: 60px;
+    padding: 40px 0 10px 0; 
+
+}
+.monitoramento{
+  padding: 0 10%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+  
+.monitora{
+  font-size: 24px;
+  padding: 40px;
+  display: inline-block;
+  width: 600px;
+  font-family: "poppins", sans-serif;
+}
+.recebaAlertas{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+
+}
+.monitoraImagem img{
+  width: 225px;
+}
+.alertaImagem img{
+  width: 225px;
+}

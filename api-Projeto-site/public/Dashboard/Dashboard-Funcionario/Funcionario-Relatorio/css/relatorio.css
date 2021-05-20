@@ -1,0 +1,81 @@
+main {
+    margin-top: 90px;
+    padding: 2rem 1.5rem;
+    background: #f1f5f9;
+    min-height: calc(100vh - 90px);
+}
+
+.relatorio{
+    border-radius: 5px;
+    font-size: 20px;
+    float: left;
+    padding-top: 20px;
+}
+
+.tabela {
+    float: right;
+    padding-right: 20px;
+}
+
+.campo-padrao {
+    text-align: center;
+    height: 30px;
+}
+
+.title {
+    position: relative;
+    top: 20px;
+}
+
+.baixar-relatorio {
+    float: right;
+    font-size: 20px;
+    padding-right: 30px;
+}
+
+.imagem {
+    width: 40px;
+}
+
+.grafico {
+    width: 60%;
+    height: 345px;
+}
+
+.filtro {
+    padding-top: 50px;
+    padding-right: 20px;
+}
+
+.combo-padrao{
+    width: 10%;
+}
+
+.btn-padrao {
+    margin-left: 20px;
+}
+/* Responsividade */
+@media only screen and (max-width: 1200px) {
+    /* Mesmas config de quando esconde o menu*/
+.sidebar {
+    width: 100px;
+}
+.sidebar li a span {
+    display: none;
+}
+.sidebar .sidebar-marca .sidebar-logo img {
+    display: none;
+}
+.sidebar .sidebar-marca .sidebar-logo-reduzido img {
+    display: block;
+}
+
+.header-dashboard {
+    margin-left: 100px;
+}
+
+.header-dashboard header {
+    width: calc(100% - 100px);
+    left: 100px;
+}
+}

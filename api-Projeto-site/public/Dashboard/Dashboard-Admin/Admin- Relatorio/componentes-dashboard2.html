@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="img/logoNovaReduzida.png"> <!-- icone da página (aparece na barra do navegador) -->
+        <title>nome da pag | usuario</title> <!-- titulo da página (aparece na barra do navegador) -->
+        <link rel="stylesheet" href="./js/anime.js">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+        <link rel="stylesheet" href="css/header-padrao2.css"> <!-- linkando css da header e sidebar -->
+        <link rel="stylesheet" href="css/componentes-padroes2.css"> <!-- linkando o css exclusivo dos componentes da página home - Empresa -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet"> <!-- link das fontes usadas no site Roboto(titulos) e Poppins(descrições) -->
+
+    </head>
+    <body>
+    <!---------------------------------------------------------------- inicio da sidebar (menu lateral) ----------------------------------------------------------------------------->
+    <input type="checkbox" id="menu-toggle">
+        <div class="sidebar">
+
+            <div class="sidebar-marca">
+                <span class="sidebar-logo-reduzido"><img src="img/logoNovaReduzidaBranca.png" alt="logo friocontrol"></span>            
+                <span class="sidebar-logo"><img src="img/LogoNovaBranco.png" alt="logo friocontrol"></span>
+            </div>
+
+            <div class="sidebar-menu">
+                <ul>
+                    <li>
+                        <a href="grafico.html"><i class="fas fa-chart-line"></i><span>Dashboard</span></a>
+                    </li>
+
+                    <li>
+                        <a href="perfil.html"><i class="fas fa-user-circle"></i><span>Perfil</span></a>
+                    </li>
+
+                    <li>
+                        <a class="active" href="relatorio.html"><i class="fas fa-clipboard-list"></i><span>Relatório</span></a>
+                    </li>
+                </ul>              
+            </div>
+
+            <div class="sidebar-menu sair">
+                <ul>
+                    <li>
+                        <a href=""><i class="fas fa-sign-out-alt"></i>
+                            <span>Encerrar sessão</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!------------------------------------------------------------------ fim da sidebar (menu lateral) ----------------------------------------------------------------->
+
+        <!----------------------------------------------------------------- inicio do header (menu do topo) ---------------------------------------------------------------->
+        <div class="header-dashboard">
+        <header>
+                <h2>
+                    <label for="menu-toggle"><i class="fas fa-bars"></i></label>
+                    Dashboard
+                </h2>
+                
+                <div class="search-wrapper">
+                    <span class="icone-pesquisa"><img src="img/icone pesquisa.png" alt=""></span>
+                    <input type="search" placeholder="Busque aqui">
+                </div>
+
+                <div class="user-wrapper">
+                    <img src="img/logoNovaReduzida.png" width="40px" height="40px" alt="">
+                    <div>
+                        <h4>Nome</h4>
+                        <small>Descrição</small>
+                    </div>
+                </div>
+        </header>
+        <!-- fim do header (menu do topo) -->
+
+        <main>
+
+            <!---------------------------------------------------------------- formulários menores (metade da tela) ---------------------------------------------------------------------------->
+            <div class="divs">
+                <section class="container-divs row-wrap-divs">
+
+                    <button class="btn-padrao marinho"> Cadastro Empresa</button>
+                    <div class="item-divs">     
+                        <section class="cad-dashboard">
+                            <form action="">
+
+                                <div class="input-container-cad">
+                                    <input onkeyup="ipt_empresa()" id="idEmpresa" class="input" type="text" pattern=".+" required />
+                                    <label class="label" for="idEmpresa">Nome da Empresa</label>
+                                </div>
+                                
+                                <div id="div_msg"></div>
+
+                                <div class="input-container-cad">
+                                    <input onkeyup="ipt_email()" type="text" required id="idEmail" maxlength="40" onchange="cadastrar()">
+                                    <label class="label" for="idEmail">Email</label>
+                                </div>
+
+                                <div id="div_msg1"></div>
+
+                                <div class="input-container-cad">
+                                    <input onblur="validarCNPJ(this)" onkeypress="mascaraCnpj()" 
+                                    autocomplete="off" id="idCnpj" class="input" type="text" pattern=".+" maxlength="18" required />
+                                    <label class="label" for="idCnpj">CNPJ</label>
+                                </div>
+
+                                <div id="div_msg2"></div>
+
+                                <div class="input-container-cad">
+                                    <input onkeyup="ipt_usuario()" type="text" id="idUsuario" maxlength="15" required>
+                                    <label class="label" for="idUsuario">Usuário</label>
+                                </div>
+
+                                <div id="div_msg3"></div>
+
+                                <div class="input-container-cad">
+                                    <input onkeyup="ipt_senha()" type="password" required id="idSenha" minlength="8" maxlength="40"
+                                    onkeyup="validarSenhaForca()">
+                                    <label class="label" for="idSenha">Senha</label>
+                                </div>
+
+                                <div id="div_msg4"></div>
+
+                                <button class="btn-cadastrar">Cadastrar</button>
+                            </form>
+                        </section>
+                    </div>
+                    
+                    <!---------------------------------------------- segundo formulario ------------------------------------------------->
+                   
+                    <div class="item-divs" style="margin-left: 10px;">     
+                        <button class="btn-padrao amarelo"> Cadastro Freezer</button>
+                        <section class="cad-dashboard">
+                            <form action="">
+
+                                <div class="input-container-cad">
+                                    <input id="idEmpresa" class="input" type="text" pattern=".+" required />
+                                    <label class="label" for="idEmpresa">Nome da Empresa</label>
+                                </div>
+
+                                <div class="input-container-cad">
+                                    <input id="pipi" class="input" type="text" pattern=".+" required />
+                                    <label class="label" for="pipi">Nome do freezer</label>
+                                </div>
+                
+                                <div class="input-container-cad">
+                                    <input id="papa" class="input" type="text" pattern=".+" required />
+                                    <label class="label" for="papa">Sensor</label>
+                                <button class="btn-cadastrar">Cadastrar</button>
+                            </form>
+                        </section>
+                    </div>
+            </div>
+             <!-------------------------------------------------------------- fim formulários menores (metade da tela) ------------------------------------------------------------------------>
+
+             <!------------------------------------------------------------------- inicio da barra de busca (ADM) ------------------------------------------------------------------------------>
+             <div class="barra-navegacao-home">
+                <!-- input de pesquisa -->
+                <div class="barra-busca-adm centralizando" style="margin-right: 7px;">
+                    <div class="search-wrapper2">
+                        <input type="search" placeholder="Filtrar por região e usúario">
+                        <span class="icone-pesquisa"><img src="img/icone pesquisa.png" alt=""></span>
+                    </div>
+                </div>
+                    <button class="download-pdf"><img src="./img/botao-de-download 1.png" alt=""></button>
+                </div>
+            <!--------------------------------------------------------------------- fim da barra de busca (ADM) ------------------------------------------------------------------------------>
+
+            <!-------------------------------------------------------------------------- Tabela crud inicio ---------------------------------------------------------------------------------->
+            <div class="box-crud">
+                <div class="content-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Funcionário</th>
+                                <th>Telefone</th>
+                                <th>N° Freezers</th>
+                                <th>N° Viagens</th>
+                                <th>Editar | Excluir</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Elizabette Kim</td>
+                                <td>11 978406357</td>
+                                <td>1</td>
+                                <td>14</td>
+                                <td class="icones">
+                                <div class="box-table">
+                                    <label class="update-crud btn" for="modal-1" ><i class="fas fa-pencil-alt"></i></label>
+                                    <label class="delet-crud btn" for="modal-2" ><i class="fas fa-trash"></i></label>
+                                </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tom Keen</td>
+                                <td>11 965490123</td>
+                                <td>2</td>
+                                <td>21</td>
+                                <td>
+                                <div class="box-table">
+                                    <label class="update-crud btn" for="modal-1"><i class="fas fa-pencil-alt"></i></label>
+                                    <label class="delet-crud btn" for="modal-2" ><i class="fas fa-trash"></i></label>
+                                </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Samar Navabi</td>
+                                <td>11 945652234</td>
+                                <td>3</td>
+                                <td>38</td>
+                                <td>
+                                <div class="box-table">
+                                    <label class="update-crud btn" for="modal-1" ><i class="fas fa-pencil-alt"></i></label>
+                                    <label class="delet-crud btn" for="modal-2" ><i class="fas fa-trash"></i></label>
+                                </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Donald Ressler</td>
+                                <td>11 965456677</td>
+                                <td>4</td>
+                                <td>43</td>
+                                <td>
+                                <div class="box-table">
+                                    <label class="update-crud btn" for="modal-1" ><i class="fas fa-pencil-alt"></i></label>
+                                    <label class="delet-crud btn" for="modal-2" ><i class="fas fa-trash"></i></label>
+                                </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Aram Mojtabai</td>
+                                <td>11 977899854</td>
+                                <td>5</td>
+                                <td>56</td>
+                                <td>
+                                <div class="box-table">
+                                    <label class="update-crud btn" for="modal-1" ><i class="fas fa-pencil-alt"></i></label>
+                                    <label class="delet-crud btn" for="modal-2" ><i class="fas fa-trash"></i></label>
+                                </div>
+                                </td>
+                            </tr>
+
+                                <td>Heitor horan</td>
+                                <td>13 900095054</td>
+                                <td>10</td>
+                                <td>3</td>
+                                <td>
+                                    <div class="box-table">
+                                        <label class="update-crud btn" for="modal-1" ><i class="fas fa-pencil-alt"></i></label>
+                                        <label class="delet-crud btn" for="modal-2" ><i class="fas fa-trash"></i></label>
+                                    </div>
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-------------------------------------------------------------------- Tabela crud fim ------------------------------------------------------------------------------------>
+
+
+
+            <!--------------------------------------------------------------------- modal update  ------------------------------------------------------------------------------------->
+
+            <input class="modal-state" id="modal-1" type="checkbox" />
+                <div class="modal">
+                    <label class="modal__bg" for="modal-1"></label>
+                    <div class="modal__inner">
+                        <label class="modal__close" for="modal-1"></label>
+                        <div class="desc-grafico desc-update">
+                            <h2>Editar</h2>
+                        </div>  
+                        <div style="padding-top: 6px; padding-left: 20px; padding-right: 20px;">
+                            <section>
+                                <form action="">
+                                    <div class="input-container-edit">
+                                        <input id="lili" class="input" type="text" pattern=".+" required />
+                                        <label class="label" for="lili">lili</label>
+                                    </div>
+
+                                    <div class="input-container-edit">
+                                        <input id="lapa" class="input" type="text" pattern=".+" required />
+                                        <label class="label" for="lapa">lapa</label>
+                                    </div>
+
+                                    <div class="input-container-edit">
+                                        <input id="pele" class="input" type="text" pattern=".+" required />
+                                        <label class="label" for="pele">pele</label>
+                                    </div> 
+                                    
+                                    <div class="input-container-edit">
+                                        <input id="polo" class="input" type="text" pattern=".+" required />
+                                        <label class="label" for="polo">polo</label>
+                                    </div>
+                                    <button class="btn-update-save">Editar</button>
+                                </form>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+            <!------------------------------------------------------------------- fim modal update  ---------------------------------------------------------------------------------->
+
+
+
+            <!--------------------------------------------------------------------- modal delet -------------------------------------------------------------------------------------->
+                <input class="modal-state" id="modal-2" type="checkbox" />
+                    <div class="modal">
+                        <label class="modal__bg" for="modal-2"></label>
+                        <div class="modal__inner-delet">
+                            <label class="modal__close" for="modal-2"></label>
+                            <div class="desc-grafico desc-delete">
+                                <h2>Excluir</h2>
+                            </div>  
+                            <div style="padding-top: 6px;padding-left: 30px; font-size: 18px;">
+                                <section>
+                                    <form action="">
+                                        <div style=" padding-right: 20px;">
+                                            <p >Tem certeza que deseja excluir essas informações?</p>
+                                            <button class="btn-delet-save">Excluir</button>
+                                        </div>
+                                    </form>
+                                </section>
+                            </div>
+                        </div>
+                </div>
+            <!------------------------------------------------------------------- fim modal delet ------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------- inicio da barra de busca (ADM) ------------------------------------------------------------------------------>
+            <div class="barra-navegacao-home">
+                <!-- input de pesquisa -->
+                <div class="barra-busca-adm centralizando" style="margin-right: 7px;">
+                    <div class="search-wrapper2">
+                        <input type="search" placeholder="Filtrar por região e usúario">
+                        <span class="icone-pesquisa"><img src="img/icone pesquisa.png" alt=""></span>
+                    </div>
+                </div>
+                    <button class="download-pdf"><img src="./img/botao-de-download 1.png" alt=""></button>
+                </div>
+            <!--------------------------------------------------------------------- fim da barra de busca (ADM) ------------------------------------------------------------------------------>
+
+            <!-------------------------------------------------------------------------- Tabela crud inicio ---------------------------------------------------------------------------------->
+            <div class="box-crud">
+                <div class="content-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Funcionário</th>
+                                <th>Telefone</th>
+                                <th>N° Freezers</th>
+                                <th>N° Viagens</th>
+                                <th>Editar | Excluir</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Elizabette Kim</td>
+                                <td>11 978406357</td>
+                                <td>1</td>
+                                <td>14</td>
+                                <td class="icones">
+                                <div class="box-table">
+                                    <label class="update-crud btn" for="modal-1" ><i class="fas fa-pencil-alt"></i></label>
+                                    <label class="delet-crud btn" for="modal-2" ><i class="fas fa-trash"></i></label>
+                                </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tom Keen</td>
+                                <td>11 965490123</td>
+                                <td>2</td>
+                                <td>21</td>
+                                <td>
+                                <div class="box-table">
+                                    <label class="update-crud btn" for="modal-1"><i class="fas fa-pencil-alt"></i></label>
+                                    <label class="delet-crud btn" for="modal-2" ><i class="fas fa-trash"></i></label>
+                                </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Samar Navabi</td>
+                                <td>11 945652234</td>
+                                <td>3</td>
+                                <td>38</td>
+                                <td>
+                                <div class="box-table">
+                                    <label class="update-crud btn" for="modal-1" ><i class="fas fa-pencil-alt"></i></label>
+                                    <label class="delet-crud btn" for="modal-2" ><i class="fas fa-trash"></i></label>
+                                </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Donald Ressler</td>
+                                <td>11 965456677</td>
+                                <td>4</td>
+                                <td>43</td>
+                                <td>
+                                <div class="box-table">
+                                    <label class="update-crud btn" for="modal-1" ><i class="fas fa-pencil-alt"></i></label>
+                                    <label class="delet-crud btn" for="modal-2" ><i class="fas fa-trash"></i></label>
+                                </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Aram Mojtabai</td>
+                                <td>11 977899854</td>
+                                <td>5</td>
+                                <td>56</td>
+                                <td>
+                                <div class="box-table">
+                                    <label class="update-crud btn" for="modal-1" ><i class="fas fa-pencil-alt"></i></label>
+                                    <label class="delet-crud btn" for="modal-2" ><i class="fas fa-trash"></i></label>
+                                </div>
+                                </td>
+                            </tr>
+
+                                <td>Heitor horan</td>
+                                <td>13 900095054</td>
+                                <td>10</td>
+                                <td>3</td>
+                                <td>
+                                    <div class="box-table">
+                                        <label class="update-crud btn" for="modal-1" ><i class="fas fa-pencil-alt"></i></label>
+                                        <label class="delet-crud btn" for="modal-2" ><i class="fas fa-trash"></i></label>
+                                    </div>
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-------------------------------------------------------------------- Tabela crud fim ------------------------------------------------------------------------------------>
+
+
+
+            <!--------------------------------------------------------------------- modal update  ------------------------------------------------------------------------------------->
+
+            <input class="modal-state" id="modal-1" type="checkbox" />
+                <div class="modal">
+                    <label class="modal__bg" for="modal-1"></label>
+                    <div class="modal__inner">
+                        <label class="modal__close" for="modal-1"></label>
+                        <div class="desc-grafico desc-update">
+                            <h2>Editar</h2>
+                        </div>  
+                        <div style="padding-top: 6px; padding-left: 20px; padding-right: 20px;">
+                            <section>
+                                <form action="">
+                                    <div class="input-container-edit">
+                                        <input id="lili" class="input" type="text" pattern=".+" required />
+                                        <label class="label" for="lili">lili</label>
+                                    </div>
+
+                                    <div class="input-container-edit">
+                                        <input id="lapa" class="input" type="text" pattern=".+" required />
+                                        <label class="label" for="lapa">lapa</label>
+                                    </div>
+
+                                    <div class="input-container-edit">
+                                        <input id="pele" class="input" type="text" pattern=".+" required />
+                                        <label class="label" for="pele">pele</label>
+                                    </div> 
+                                    
+                                    <div class="input-container-edit">
+                                        <input id="polo" class="input" type="text" pattern=".+" required />
+                                        <label class="label" for="polo">polo</label>
+                                    </div>
+                                    <button class="btn-update-save">Editar</button>
+                                </form>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+            <!------------------------------------------------------------------- fim modal update  ---------------------------------------------------------------------------------->
+
+
+
+            <!--------------------------------------------------------------------- modal delet -------------------------------------------------------------------------------------->
+                <input class="modal-state" id="modal-2" type="checkbox" />
+                    <div class="modal">
+                        <label class="modal__bg" for="modal-2"></label>
+                        <div class="modal__inner-delet">
+                            <label class="modal__close" for="modal-2"></label>
+                            <div class="desc-grafico desc-delete">
+                                <h2>Excluir</h2>
+                            </div>  
+                            <div style="padding-top: 6px;padding-left: 30px; font-size: 18px;">
+                                <section>
+                                    <form action="">
+                                        <div style=" padding-right: 20px;">
+                                            <p >Tem certeza que deseja excluir essas informações?</p>
+                                            <button class="btn-delet-save">Excluir</button>
+                                        </div>
+                                    </form>
+                                </section>
+                            </div>
+                        </div>
+                </div>
+            <!------------------------------------------------------------------- fim modal delet ------------------------------------------------------------------------------------>            
+        </main>  
+</body>
+</html>
+<script>
+
+function ipt_empresa(){
+        var nome_empresa = idEmpresa.value;
+
+        if(nome_empresa.length > 3){
+            div_msg.innerHTML = '';
+            idEmpresa.style.borderColor = '#00959C';
+            
+        } else {
+            div_msg.innerHTML = '<span style="color: red; font-size: 15px;">Caracteres insuficientes!</span>';
+            idEmpresa.style.borderColor = 'red';
+        }
+    }
+
+
+    function ipt_email(){
+        var nome_email = idEmail.value;
+
+        if(nome_email.indexOf('@') && nome_email.indexOf('.') > -1){
+            div_msg1.innerHTML = '';
+            idEmail.style.borderColor = '#00959C'
+            
+        } else {
+            div_msg1.innerHTML = '<span style="color: red; font-size: 15px;">Email incorreto!</span>';
+            idEmail.style.borderColor = 'red';
+        }
+    }
+
+
+    function ipt_usuario(){
+        var usuarios = idUsuario.value;
+
+        if(usuarios.length > 8 && usuarios.indexOf('@') > -1){
+            div_msg3.innerHTML = '';
+            idUsuario.style.borderColor = '#00959C';
+            
+        } else {
+            div_msg3.innerHTML = '<span style="color: red; font-size: 15px;">Minimo de 8 caracteres<br> Deve conter @</span>';
+            idUsuario.style.borderColor = 'red';
+        }
+    }
+
+    function ipt_senha(){
+        var senhas = idSenha.value;
+
+        if(senhas.length > 6 && senhas.indexOf('!') > -1 || senhas.indexOf('@') > -1 || senhas.indexOf('*') > -1 || senhas.indexOf('_') > -1){
+            div_msg4.innerHTML = '';
+            idSenha.style.borderColor = '#00959C';
+            
+        } else {
+            div_msg4.innerHTML = '<span style="color: red; font-size: 15px;">Minimo de 6 caracteres<br> Deve conter um caracter especial: ! @ * _</span>';
+            idSenha.style.borderColor = 'red';
+        }
+    }
+</script>

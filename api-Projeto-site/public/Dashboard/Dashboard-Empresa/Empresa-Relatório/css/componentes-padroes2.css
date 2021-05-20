@@ -1,0 +1,770 @@
+/*************************************************************** inicio especificações da página ************************************************************/
+
+body {
+    background-color: #f1f5f9;
+}
+
+main {
+    margin-top: 90px;
+    padding: 2rem 1.5rem;
+    min-height: calc(100vh - 90px);
+}
+
+.conteudo-principal {
+    margin-left: 345px;
+}
+
+
+/*************************************************************** fim especificações da página ************************************************************/
+
+
+/*************************************************************** início responsividade dashboard ************************************************************/
+
+
+/* Responsividade */
+
+@media only screen and (max-width: 1200px) {
+    /* Mesmas config de quando esconde o menu*/
+    .sidebar {
+        width: 100px;
+    }
+    .sidebar li a span {
+        display: none;
+    }
+    .sidebar .sidebar-marca .sidebar-logo img {
+        display: none;
+    }
+    .sidebar .sidebar-marca .sidebar-logo-reduzido img {
+        display: block;
+    }
+    .header-dashboard {
+        margin-left: 100px;
+    }
+    .header-dashboard header {
+        width: calc(100% - 100px);
+        left: 100px;
+    }
+}
+
+
+/* Responsividade para o conteudo em telas menores min 42:00 https://www.youtube.com/watch?v=OJEQaVT45XA*/
+
+
+/************************************************************* fim responsividade dashboard ******************************************************/
+
+
+/****************************************************************** titulos *********************************************************************/
+
+.verde {
+    background: #00959C;
+    color: white;
+    border: #00959C;
+}
+
+.amarelo {
+    background: #FBC84F;
+    color: white;
+    border: #FBC84F;
+}
+
+.marinho {
+    background: #03313D;
+    color: white;
+    border: #03313D;
+}
+
+.btn-padrao {
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    height: 50px;
+    text-align: center;
+    width: 150px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    text-shadow: 0;
+    font-size: 12px;
+    font-weight: bold;
+    border: #ffffff00;
+    position: absolute;
+    margin-top: -20px;
+    margin-left: 20px;
+}
+
+
+/*************************************************************** fim titulos *********************************************************************/
+
+
+/************************************************************* inicio style barra busca **********************************************************/
+
+.barra-navegacao-home {
+    margin-top: 5px;
+    height: 75px;
+    display: flex;
+}
+
+.barra-busca-home {
+    background-color: white;
+    width: 40%;
+    height: 75px;
+    box-shadow: 3px 3px 5px 2px #ccc;
+    border-radius: 5px;
+    display: flex;
+}
+
+
+/****************** barra adm (no lugar da class .barra-busca-home) ***************/
+
+.barra-busca-adm {
+    background-color: white;
+    width: 90%;
+    height: 75px;
+    box-shadow: 3px 3px 5px 2px #ccc;
+    border-radius: 5px;
+    display: flex;
+}
+
+.barra-data-home {
+    width: 25%;
+    height: 75px;
+    box-shadow: 3px 3px 5px 2px #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.select-busca-home {
+    background-color: white;
+    width: 25%;
+    height: 75px;
+    box-shadow: 3px 3px 5px 2px #ccc;
+    border-radius: 5px;
+}
+
+.search-wrapper2 {
+    width: 100%;
+    border-radius: 5px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.search-wrapper2 span {
+    display: inline-block;
+    padding: 0rem 1rem;
+    font-size: 1.5rem;
+}
+
+.search-wrapper2 input {
+    height: 100%;
+    padding: .5rem;
+    border: none;
+    outline: none;
+    width: 95%;
+}
+
+.select-pers {
+    width: 80%;
+}
+
+.select {
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Resetando o Select */
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #ffffff;
+    background-image: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.select {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    margin: 10px;
+    padding: 10px;
+    line-height: 3;
+    background: #ffffff;
+    overflow: hidden;
+    border-radius: .25em;
+}
+
+select {
+    flex: 1;
+    padding: 0 .5em;
+    color: rgb(34, 32, 32);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    margin-right: 10px;
+    background: #ffffff;
+    border-radius: 50px;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+    color: #0F969D;
+}
+
+.select:hover::after {
+    color: #0a6166;
+}
+
+.tam-select {
+    width: 100%;
+}
+
+.download-pdf {
+    width: 10%;
+    border-radius: 5px;
+    background-color: #0F969D;
+    border: none;
+    height: 75px;
+    box-shadow: 3px 3px 5px 2px #ccc;
+}
+
+.download-pdf:hover {
+    background-color: #0a6166;
+}
+
+.download-pdf img {
+    width: 32px;
+}
+
+
+/****************************************************************** fim style barra busca ************************************************************/
+
+
+/******************************************************************* inicio style gráfico   **********************************************************/
+
+.grafico-analise {
+    margin-top: 40px;
+    background-color: white;
+    box-shadow: 3px 3px 5px 2px #ccc;
+    border-radius: 5px;
+    height: 600px;
+    width: 100%;
+}
+
+.grafico-analise1 {
+    margin-top: 10px;
+    height: 85%;
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.centralizando {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.infos-grafico {
+    padding-top: 35px;
+    padding-left: 30px;
+}
+
+.desc-grafico {
+    width: 100%;
+    height: auto;
+    padding-left: 30px;
+    padding-top: 35px;
+    padding-bottom: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.desc-grafico p {
+    font-size: 15px;
+}
+
+.desc-marinho {
+    background: #03313d57;
+}
+
+.desc-amarelo {
+    background: #fbc74f54;
+}
+
+.desc-verde {
+    background-color: #00949c54;
+}
+
+
+/******************************************************************* fim style gráfico   **********************************************************/
+
+
+/*****************************************************************  inicio  da tabela crud  *******************************************************/
+
+.box-crud {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.content-table {
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 2px #ccc;
+    background-color: #fff;
+    margin-top: 45px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    height: auto;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #c4c4c477;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgb(255, 255, 255);
+}
+
+body {
+    font-family: Verdana;
+}
+
+table {
+    width: 100%;
+}
+
+thead tr {
+    background-color: #0F969D;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+
+th,
+td {
+    padding: 1rem;
+    text-align: center;
+}
+
+th {
+    font-weight: bold;
+}
+
+
+/*lixinho e lapis*/
+
+.icones {
+    width: 90px;
+}
+
+.box-table {
+    display: flex;
+    float: inline-start;
+    padding: 5px;
+}
+
+.update-crud {
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+    background-color: #116080;
+    margin-right: 5px;
+    cursor: pointer;
+    padding-top: 10px;
+}
+
+.fa-pencil-alt {
+    width: 40px;
+    color: white;
+}
+
+.update-crud:hover {
+    background-color: #0a3d52;
+}
+
+.delet-crud {
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+    background-color: #FF4F4F;
+    margin-left: 15px;
+    cursor: pointer;
+    padding-top: 10px;
+}
+
+.delet-crud i {
+    width: 40px;
+    color: white;
+}
+
+.delet-crud:hover {
+    background-color: #cf2525;
+}
+
+
+/************************************************************************  fim da tabela  ********************************************************************************/
+
+
+/***************************************************************************** modal *************************************************************************************/
+
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.774);
+    transition: opacity .25s ease;
+    z-index: 411212142;
+}
+
+.desc-update {
+    background: #116080;
+}
+
+.desc-update h2 {
+    color: white;
+}
+
+.modal__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.modal-state {
+    display: none;
+}
+
+.modal-state:checked+.modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-state:checked+.modal .modal__inner {
+    top: 0;
+}
+
+.modal__inner {
+    transition: top .25s ease;
+    position: absolute;
+    top: -20%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    margin: auto;
+    overflow: auto;
+    background: #fff;
+    border-radius: 5px;
+    height: 50%;
+}
+
+.modal__inner-delet {
+    transition: top .25s ease;
+    position: absolute;
+    top: -20%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    margin: auto;
+    overflow: auto;
+    background: #fff;
+    border-radius: 5px;
+
+    height: 35%;
+}
+.modal__close {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    width: 1.1em;
+    height: 1.1em;
+    cursor: pointer;
+}
+
+.modal__close:after,
+.modal__close:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 1.5em;
+    background: rgb(255, 255, 255);
+    display: block;
+    transform: rotate(45deg);
+    left: 50%;
+    margin: -3px 0 0 -1px;
+    top: 0;
+}
+
+.modal__close:hover:after,
+.modal__close:hover:before {
+    background: #aaa;
+}
+
+.modal__close:before {
+    transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+    .modal__inner {
+        width: 90%;
+        height: 90%;
+        box-sizing: border-box;
+    }
+    .modal__inner-delet {
+        width: 90%;
+        height: 90%;
+        box-sizing: border-box;
+    }
+}
+
+
+/******************************** início modal delete *****************************/
+
+.desc-delete {
+    background: #FF4F4F;
+}
+
+.desc-delete h2 {
+    color: white;
+}
+
+.btn-delet-save {
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #FF4F4F;
+    border: none;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+    float: right
+}
+
+
+/******************************** fim modal delete *************************/
+
+
+/************************* início modal update ************************************/
+
+.input-container-edit {
+    position: relative;
+    margin-top: 20px;
+}
+
+.input-container-edit input {
+    border: 0;
+    border-bottom: 2px solid #9e9e9e;
+    outline: none;
+    transition: .2s ease-in-out;
+    box-sizing: border-box;
+}
+
+.input-container-edit label {
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #616161;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    font-size: 1rem;
+    cursor: text;
+    transition: .2s ease-in-out;
+    box-sizing: border-box;
+}
+
+.input-container-edit input,
+.input-container-edit label {
+    width: 100%;
+    height: 3rem;
+    font-size: 1rem;
+}
+
+.input-container-edit input:valid,
+.input-container-edit input:focus {
+    border-bottom: 2px solid #0a3d52;
+}
+
+.edit-inputs input:valid+label,
+.input-container-edit input:focus+label {
+    color: #0a3d52;
+    font-size: .8rem;
+    top: -30px;
+    pointer-events: none;
+}
+
+.btn-update-save {
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #116080;
+    border: none;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+    float: right
+}
+
+
+/*********************** fim modal update ********************************/
+
+
+/************************************************************************** fim modal *******************************************************************************/
+
+
+/************************************************************************** cadastros *******************************************************************************/
+
+.cadastro-container {
+    margin-top: 40px;
+    background-color: white;
+    box-shadow: 3px 3px 5px 2px #ccc;
+    border-radius: 5px;
+    height: 600px;
+    width: 100%;
+}
+
+.cadastro-maior {
+    margin-top: 10px;
+    height: 85%;
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.divs {
+    width: 100%;
+    margin-top: 75px;
+}
+
+.row-wrap-divs {
+    flex-flow: row wrap;
+}
+
+.container-divs {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.item-divs {
+    flex: 1;
+    background-color: white;
+    box-shadow: 3px 3px 5px 2px #ccc;
+    border-radius: 5px;
+    text-align: initial;
+    font-size: 1.5em;
+}
+
+.container-chart2 {
+    padding-top: 100px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.cad-dashboard {
+    padding: 50px;
+}
+
+.input-container-cad {
+    position: relative;
+    margin-top: 20px;
+}
+
+.input-container-cad input {
+    border: 0;
+    border-bottom: 2px solid #9e9e9e;
+    outline: none;
+    transition: .2s ease-in-out;
+    box-sizing: border-box;
+}
+
+.input-container-cad label {
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #616161;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    font-size: 1rem;
+    cursor: text;
+    transition: .2s ease-in-out;
+    box-sizing: border-box;
+}
+
+.input-container-cad input,
+.input-container-cad label {
+    width: 100%;
+    height: 3rem;
+    font-size: 1rem;
+}
+
+.input-container-cad input:valid,
+.input-container-cad input:focus {
+    border-bottom: 2px solid #00959C;
+}
+
+.input-container-cad input:valid+label,
+.input-container-cad input:focus+label {
+    color: #00959C;
+    font-size: .8rem;
+    top: -30px;
+    pointer-events: none;
+}
+
+.input-container-cad section {
+    margin: 15px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 0 0 2px 2px;
+    background-color: #FFF;
+}
+
+.btn-cadastrar {
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #00959C;
+    border: none;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 20px;
+}
+
+
+/************************************************************************** fim dos cadastros  ************************************************************/

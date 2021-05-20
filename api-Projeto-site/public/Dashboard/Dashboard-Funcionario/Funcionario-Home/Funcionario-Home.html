@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+    <link rel="icon" href="img/logoNovaReduzida.png"> <!-- icone da página (aparece na barra do navegador) -->
+    <title>Home | Funcionário</title> <!-- titulo da página (aparece na barra do navegador) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="css/elementos-padrao1.css">
+    <link rel="stylesheet" href="css/header-home-funcionario.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.2/chart.min.js" 
+    integrity="sha512-dnUg2JxjlVoXHVdSMWDYm2Y5xcIrJg1N+juOuRi0yLVkku/g26rwHwysJDAMwahaDfRpr1AxFz43ktuMPr/l1A==" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <input type="checkbox" id="menu-toggle">
+    <div class="sidebar">
+        <div class="sidebar-marca">
+            <span class="sidebar-logo-reduzido"><img src="img/logoNovaReduzidaBranca.png" alt="logo friocontrol"></span>            
+            <span class="sidebar-logo"><img src="img/LogoNovaBranco.png" alt="logo friocontrol"></span>
+
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a class="active" href="/Funcionario-Home/Funcionario-Home.html"><i class="fas fa-chart-line"></i><span>Dashboard</span></a>
+                </li>
+                <li>
+                    <a href="/Funcionario-Perfil/perfil.html"><i class="fas fa-user-circle"></i><span>Perfil</span></a>
+                </li>
+                <li>
+                    <a href="/Funcionario-Relatorio/Funcionario-Relatório.html"><i class="fas fa-clipboard-list"></i><span>Relatório</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar-menu sair">
+            <ul>
+                <li>
+                    <a href=""><i class="fas fa-sign-out-alt"></i>
+                        <span>Encerrar sessão</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="header-dashboard">
+        <header>
+            <h2>
+                <label for="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </label>
+
+                Dashboard
+            </h2>
+            <div class="search-wrapper">
+                <span class="icone-pesquisa"><img src="img/icone pesquisa.png" alt=""></span>
+                <input type="search" placeholder="Busque aqui">
+            </div>
+            <div class="user-wrapper">
+                <img src="img/funcionario.png" width="40px" height="40px" alt="">
+                <div>
+                    <h4>Elizabette Kim</h4>
+                    <small>Funcionário</small>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- 3 cards no começo -->
+            <div class="cards">
+                <!-- Card de monitoramento -->
+                <div class="card">
+                    <div class="align-items">
+                        <div class="desc-count">
+                            <h1 class="count">847</h1>
+                            <p>Dias</p>
+                        </div>
+                        <div>
+                            <img src="img/calendar.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- Card de sensor -->
+                <div class="card">
+                    <div class="align-items">
+                        <div class="desc-count">
+                            <h1 class="count">12</h1>
+                            <p>Sensores</p>
+                        </div>
+                        <div>
+                            <img src="img/medicao.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- Card de viagens -->
+                <div class="card">
+                    <div class="align-items">
+                        <div class="desc-count">
+                            <h1 class="count">25</h1>
+                            <p>Viagens</p>
+                        </div>
+                        <div>
+                            <img src="img/decolar-o-aviao.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notificações -->
+            <div class="scroll">
+                <button class="btn-padrao amarelo"> Notificações </button>
+                <section class="container-notificacoes column-notificacoes">
+                    <div class="item-notificacoes">
+                        <p class="data-notificacao">17/04/2021</p>
+                        <div style="text-align: start;">
+                            <h2 class="titulo-notificacao vermelho-notif">Importante!</h2>
+                            <p class="msg-notificacao">Freezer 21 está perto de atingir a temperatura minima exigida para o produto.</p>
+                        </div>
+                        <span class="link-notificacao">Visualizar Gráfico</span>
+                    </div>
+                    <div class="item-notificacoes">
+                        <p class="data-notificacao">17/04/2021</p>
+                        <div style="text-align: start;">
+                            <h2 class="titulo-notificacao amarelo-notif">Viagem Iniciada</h2>
+                            <p class="msg-notificacao">Freezer 05 está saindo de São Paulo em direção ao Rio de Janeiro.</p>
+                        </div>
+                        <span class="link-notificacao">Visualizar Gráfico</span>
+                    </div>
+                    <div class="item-notificacoes">
+                        <p class="data-notificacao">15/04/2021</p>
+                        <div style="text-align: start;">
+                            <h2 class="titulo-notificacao verde-notif">Viagem Finalizada</h2>
+                            <p class="msg-notificacao">Freezer 38 chegou ao seu destino final: Minas Gerais.</p>
+                        </div>
+                        <span class="link-notificacao">Visualizar Gráfico</span>
+                    </div>
+                    <div class="item-notificacoes">
+                        <p class="data-notificacao">14/04/2021</p>
+                        <div style="text-align: start;">
+                            <h2 class="titulo-notificacao vermelho-notif">Importante!</h2>
+                            <p class="msg-notificacao">Freezer 21 está perto de atingir a temperatura minima exigida para o produto.</p>
+                        </div>
+                        <span class="link-notificacao">Visualizar Gráfico</span>
+                    </div>
+                    <div class="item-notificacoes">
+                        <p class="data-notificacao">13/04/2021</p>
+                        <div style="text-align: start;">
+                            <h2 class="titulo-notificacao amarelo-notif">Viagem Iniciada</h2>
+                            <p class="msg-notificacao">Freezer 05 está saindo de São Paulo em direção ao Rio de Janeiro.</p>
+                        </div>
+                        <span class="link-notificacao">Visualizar Gráfico</span>
+                    </div>
+                    <div class="item-notificacoes">
+                        <p class="data-notificacao">09/04/2021</p>
+                        <div style="text-align: start;">
+                            <h2 class="titulo-notificacao verde-notif">Viagem Finalizada</h2>
+                            <p class="msg-notificacao">Freezer 38 chegou ao seu destino final: Minas Gerais.</p>
+                        </div>
+                        <span class="link-notificacao">Visualizar Gráfico</span>
+                    </div>
+                </section>
+            </div>
+
+            <!------------------------------------------------------------------- inicio da barra de busca ------------------------------------------------------------------------------>
+            <div class="barra-navegacao-home">
+                <!-- input de pesquisa -->
+                <div class="barra-busca-home centralizando" style="margin-right: 10px;">
+                    <div class="search-wrapper2">
+                        <input type="search" placeholder="Filtrar por região e usúario">
+                        <span class="icone-pesquisa"><img src="img/icone pesquisa.png" alt=""></span>
+                    </div>
+                </div>
+
+                <!-- select de freezers -->
+                <div class="select-busca-home">
+                    <div class="centralizando tam-select">
+                        <div class="select">
+                            <select name="slct" id="slct">
+                            <option selected disabled>Selecione um Freezer</option>
+                            <option value="">Freezer 1</option>
+                            <option value="">Freezer 2</option>
+                            <option value="">Freezer 3</option>
+                            <option value="">Freezer 4</option>
+                            <option value="">Freezer 5</option>
+                            <option value="">Freezer 6</option>
+                            <option value="">Freezer 7</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--------------------------------------------------------------------- fim da barra de busca ------------------------------------------------------------------------------>
+            
+            <!---------------------------------------------------------------------- inicio do gráfico --------------------------------------------------------------------------------->
+            <div class="grafico-analise">
+                <button class="btn-padrao amarelo"> Descrição </button>
+                <div class="desc-grafico desc-amarelo">
+                   <p> Gráfico com as informações de temperatura do freezer 00, informações obtidas por segundo </p>
+                </div>
+                <div class="centralizando">
+                    <div class="grafico-analise1">
+                                
+                        <section style="width:100%; height: 50%;">
+                            <canvas id="chart"></canvas>
+                        <section>
+                    </div>
+                </div>
+            </div>
+            
+            <!--------------------------------------------------------------------- fim do gráfico ------------------------------------------------------------------------------------>
+
+            <div class="divs">
+                <section class="container-divs row-wrap-divs">
+
+                    <!-- grafico viagens -->
+                    <button class="btn-padrao amarelo"> Descrição </button>
+                    <div class="item-divs">     
+                        <div class="desc-grafico desc-amarelo">
+                            <p> Gráfico com as informações de temperatura do freezer 00, informações obtidas por segundo </p>
+                         </div>
+                        <div class="container-chart2">
+                            <div>
+                              <canvas id="canvass"></canvas>
+                            </div>
+                          </div>
+                    </div>
+                    
+                    <!-- grafico viagens -->
+                   
+                    <div class="item-divs" style="margin-left: 10px;">     
+                        <button class="btn-padrao amarelo"> Descrição </button>
+                        <div class="desc-grafico desc-amarelo">
+                            <p> Gráfico com as informações de temperatura do freezer 00, informações obtidas por segundo </p>
+                         </div>
+                        <div class="container-chart2">
+                            <div>
+                              <canvas id="viagens"></canvas>
+                            </div>
+                          </div>
+                    </div>
+                    </div>
+                </section>
+            </div>
+            <!-- Gráfico viagens-->
+            <!-- <div class="content-chart flow-chart">
+                <div class="content-sidebar-chart">
+                    <div class="col-chart">
+                        <div class="content-chart-select">
+                        <button class="btn-padrao amarelo posicao-btn"> Viagens </button>
+                        <canvas id="viagens" style="width: 100%;"></canvas>
+                        </div>
+                    </div>  
+                </div>
+            </div> -->
+
+
+        </main>
+    </div>
+      
+</body>
+</html>
+
+<script>
+    
+
+
+    // dados gráfico de barra (2° gráfico)
+    var ctx = canvass.getContext('2d');
+  
+    var viagem = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'],
+            datasets: [{
+                label: 'Viagens',
+                data: [10, 15, 25, 20, 35],
+                backgroundColor:"#FBC84F",
+                borderColor: "#FBC84F",
+                borderWidth: 1
+            }]
+        },
+        options: {
+        }
+    });
+    var ctx = viagens.getContext('2d');
+  
+    var viagem = new Chart(ctx, {
+      type: 'bar',
+      data: {
+            labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'],
+            datasets: [{
+                label: 'Viagens',
+                data: [10, 15, 25, 20, 35],
+                backgroundColor:"#FBC84F",
+                borderColor: "#FBC84F",
+                borderWidth: 1
+            }]
+        },
+        options: {
+        }
+    });
+ 
+
+    // // fim dados gráfico de barra (2° gráfico)
+
+    // Gráfico do Freezer (API)
+
+    var context = document.getElementById("chart").getContext("2d");
+    context.canvas.width = 1000;
+    context.canvas.height = 250;
+
+    var configuration = {
+        type: 'line',
+        data: {
+            datasets: [{
+                label: "Temperature x Time",
+                type: 'line',
+                borderColor: ['#ff3232'],
+                backgroundColor: ['#ff7f7f']
+            }]
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                    //type: 'value',
+                    distribution: 'series',
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }],
+                yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Temperature'
+                    },
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+            },
+            animation: {
+                duration: 0
+            }
+        }
+    };
+
+    var chart = new Chart(context, configuration);
+
+    //Função para obter os dados de temperatura do server
+    //Seria mais interessante fazer isso com WebSocket, porém para fins academicos, os dados serão atualizados via HTTP
+
+    //Esse atributo dentro do contexto serve para saber qual foi o último índice processado, assim eliminado os outros elementos na
+    //hora de montar/atualizar o gráfico
+    this.lastIndexTemp = 0;
+    this.time = 0;
+
+    function get_data(){
+
+        var http = new XMLHttpRequest();
+        http.open('GET', 'http://localhost:3000/api', false);
+        http.send(null);        
+        
+        var obj = JSON.parse(http.responseText);
+        if (obj.data.length == 0){
+            return;
+        }
+
+        var _lastIndexTemp = this.lastIndexTemp;
+        this.lastIndexTemp = obj.data.length;
+        listTemp = obj.data.slice(_lastIndexTemp);
+
+        listTemp.forEach(data => {
+            //Máximo de 60 itens exibidos no gráfico
+            if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10){
+                chart.data.labels.shift();
+                chart.data.datasets[0].data.shift();
+            }
+
+            chart.data.labels.push(this.time++);
+            chart.data.datasets[0].data.push(parseFloat(data));
+            chart.update();
+        });
+        
+        document.getElementById('average').textContent = obj.average;
+        document.getElementById('averageHour').textContent = obj.averageHour;
+    } 
+
+
+    setInterval(() => {
+        get_data();
+    }, 1000);
+
+</script>

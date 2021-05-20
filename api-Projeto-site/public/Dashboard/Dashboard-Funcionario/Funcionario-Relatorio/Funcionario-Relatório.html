@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Dashboard/Dashboard-Empresa/Empresa-Relatório/css/componentes-padroes2.css">
+    <link rel="stylesheet" href="/Dashboard/Dashboard-Empresa/Empresa-Relatório/css/header-padrao2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/header-home-funcionario.css">
+    <link rel="stylesheet" href="css/relatorio.css">
+    <link rel="stylesheet" href="css/tabela.css">
+    <link rel="stylesheet" href="css/Funcionario-Relatorio.css">
+
+    <link rel="icon" href="img/logoNovaReduzida.png"> <!-- icone da página (aparece na barra do navegador) -->
+    <title>Relatorio | Funcionário</title> <!-- titulo da página (aparece na barra do navegador) -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"
+        integrity="sha512-BqNYFBAzGfZDnIWSAEGZSD/QFKeVxms2dIBPfw11gZubWwKUjEgmFUtUls8vZ6xTRZN/jaXGHD/ZaxD9+fDo0A=="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <input type="checkbox" id="menu-toggle">
+    <div class="sidebar">
+
+        <div class="sidebar-marca">
+            <span class="sidebar-logo-reduzido"><img src="img/logoNovaReduzidaBranca.png" alt="logo friocontrol"></span>
+            <span class="sidebar-logo"><img src="img/LogoNovaBranco.png" alt="logo friocontrol"></span>
+        </div>
+
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="grafico.html"><i class="fas fa-chart-line"></i><span>Dashboard</span></a>
+                </li>
+
+                <li>
+                    <a href="perfil.html"><i class="fas fa-user-circle"></i><span>Perfil</span></a>
+                </li>
+
+                <li>
+                    <a class="active" href="relatorio.html"><i
+                            class="fas fa-clipboard-list"></i><span>Relatório</span></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sidebar-menu sair">
+            <ul>
+                <li>
+                    <a href=""><i class="fas fa-sign-out-alt"></i>
+                        <span>Encerrar sessão</span></a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="header-dashboard">
+        <header>
+            <h2>
+                <label for="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </label>
+
+                Dashboard
+            </h2>
+            <div class="search-wrapper">
+                <span class="icone-pesquisa"><img src="img/icone pesquisa.png" alt=""></span>
+                <input type="search" placeholder="Search here">
+            </div>
+            <div class="user-wrapper">
+                <img src="img/funcionario.png" width="40px" height="40px" alt="">
+                <div>
+                    <h4>Elisabette Kim</h4>
+                    <small>Funcionario</small>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="barra-navegacao-home">
+                <!-- input de pesquisa -->
+                <div class="barra-busca-home centralizando" style="margin-right: 7px;">
+                    <div class="search-wrapper2">
+                        <input type="search" placeholder="Filtrar por freezers ou funcionários">
+                        <span class="icone-pesquisa"><img src="img/icone pesquisa.png" alt=""></span>
+                    </div>
+                </div>
+
+                <div class="barra-data-home centralizando" style="margin-right: 7px;">
+                    <div class="search-wrapper2">
+                        <input type="date">
+                    </div>
+                </div>
+
+                <!-- select de freezers -->
+                <div class="select-busca-home" style="margin-right: 7px;">
+                    <div class="centralizando tam-select">
+                        <div class="select">
+                            <select name="slct" id="slct">
+                                <option selected disabled>Selecione</option>
+                                <option value="">Freezer 1</option>
+                                <option value="">Freezer 2</option>
+                                <option value="">Freezer 3</option>
+                                <option value="">Freezer 4</option>
+                                <option value="">Freezer 5</option>
+                                <option value="">Freezer 6</option>
+                                <option value="">Freezer 7</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="download-pdf"><img src="./img/botao-de-download 1.png" alt=""></button>
+            </div>
+
+            <!-- grafico -->
+
+            <div class="grafico-analise">
+                <button class="btn-padrao amarelo"> Cadastrar Viagem </button>
+                <div class="desc-grafico desc-amarelo">
+                    <p> Gráfico com as informações de temperatura da viagem, informações obtidas por segundo.! </p>
+                </div>
+
+                <div class="containerGrafico">
+                    <div class="graficoIMG" style="width: 800px;">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- tabela -->
+
+            <div class="box-crud">
+                <div class="content-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nº Freezer</th>
+                                <th>Saida Data</th>
+                                <th>Saida Local</th>
+                                <th>Chegada Data</th>
+                                <th>Chegada Local</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="icones">
+                                    <div class="box-table">
+                                        <label class="update-crud btn" for="modal-1"><i
+                                                class="fas fa-pencil-alt"></i></label>
+                                        <label class="delet-crud btn" for="modal-2"><i class="fas fa-trash"></i></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="icones">
+                                    <div class="box-table">
+                                        <label class="update-crud btn" for="modal-1"><i
+                                                class="fas fa-pencil-alt"></i></label>
+                                        <label class="delet-crud btn" for="modal-2"><i class="fas fa-trash"></i></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="icones">
+                                    <div class="box-table">
+                                        <label class="update-crud btn" for="modal-1"><i
+                                                class="fas fa-pencil-alt"></i></label>
+                                        <label class="delet-crud btn" for="modal-2"><i class="fas fa-trash"></i></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="icones">
+                                    <div class="box-table">
+                                        <label class="update-crud btn" for="modal-1"><i
+                                                class="fas fa-pencil-alt"></i></label>
+                                        <label class="delet-crud btn" for="modal-2"><i class="fas fa-trash"></i></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="icones">
+                                    <div class="box-table">
+                                        <label class="update-crud btn" for="modal-1"><i
+                                                class="fas fa-pencil-alt"></i></label>
+                                        <label class="delet-crud btn" for="modal-2"><i class="fas fa-trash"></i></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="icones">
+                                <div class="box-table">
+                                    <label class="update-crud btn" for="modal-1"><i
+                                            class="fas fa-pencil-alt"></i></label>
+                                    <label class="delet-crud btn" for="modal-2"><i class="fas fa-trash"></i></label>
+                                </div>
+                            </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+
+            <!------------------------------------------------------------------ início do modal editar  ------------------------------------------------------------------------------------->
+            <input class="modal-state" id="modal-1" type="checkbox" />
+            <div class="modal">
+                <label class="modal__bg" for="modal-1"></label>
+                <div class="modal__inner">
+                    <label class="modal__close" for="modal-1"></label>
+                    <div class="desc-grafico desc-update">
+                        <h2>Editar</h2>
+                    </div>
+                    <div style="padding-top: 6px; padding-left: 20px; padding-right: 20px;">
+                        <section>
+                            <form action="">
+                                <div class="input-container-edit">
+                                    <input onkeyup="ipt_funcionario()" id="funcionario" class="input" type="text"
+                                        pattern=".+" required />
+                                    <label class="label" for="funcionario">N° do freezer</label>
+                                </div>
+
+                                <div id="div_editar"></div>
+
+                                <div class="input-container-edit">
+                                    <input onkeyup="ipt_telefone()" id="telefone" class="input" type="text" pattern=".+"
+                                        required />
+                                    <label class="label" for="telefone">saida data</label>
+                                </div>
+
+                                <div id="div_editar1"></div>
+
+                                <div class="input-container-edit">
+                                    <input onkeyup="ipt_freezers()" id="freezers" class="input" type="text" pattern=".+"
+                                        required />
+                                    <label class="label" for="freezers">saida local</label>
+                                </div>
+
+                                <div id="div_editar2"></div>
+
+                                <div class="input-container-edit">
+                                    <input onkeyup="ipt_viagens()" id="viagens" class="input" type="text" pattern=".+"
+                                        required />
+                                    <label class="label" for="viagens">chegada data</label>
+                                </div>
+
+                                <div id="div_editar3"></div>
+
+                                <div class="input-container-edit">
+                                    <input onkeyup="ipt_viagens()" id="viagens" class="input" type="text" pattern=".+"
+                                        required />
+                                    <label class="label" for="viagens">chegada data</label>
+                                </div>
+
+                                <div id="div_editar4"></div>
+
+                                <button class="btn-update-save">Editar</button>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <!------------------------------------------------------------------- fim do modal editar  ---------------------------------------------------------------------------------->
+
+            <!------------------------------------------------------------------ início modal excluir -------------------------------------------------------------------------------------->
+            <input class="modal-state" id="modal-2" type="checkbox" />
+            <div class="modal">
+                <label class="modal__bg" for="modal-2"></label>
+                <div class="modal__inner-delet">
+                    <label class="modal__close" for="modal-2"></label>
+                    <div class="desc-grafico desc-delete">
+                        <h2>Excluir</h2>
+                    </div>
+                    <div style="padding-top: 6px; padding-left: 30px; font-size: 18px;">
+                        <section>
+                            <form action="">
+                                <div style=" padding-right: 20px;">
+                                    <p>Tem certeza que deseja excluir essas informações?</p>
+                                    <button class="btn-delet-save">Excluir</button>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <!-- cadastrar viagem -->
+
+            <div class="divs">
+                <section class="container-divs row-wrap-divs">
+                    <button class="btn-padrao amarelo">Cadastrar viagem</button>
+                    <div class="item-divs">
+                        <div class="row">
+                            <section class="cad-dashboard">
+                                <form action="">
+                                    <div class="divFreezer">
+                                        <div class="input-container-cad">
+                                            <input maxlength="8" id="nFreezer" class="input" type="number" pattern=".+"
+                                            onkeyup="numFreezer()" required />
+                                            <label class="label" for="nFreezer">N° do freezer</label>
+                                        </div>
+
+                                        <div id="msg"></div>
+                                    </div>
+
+                                    <div class="divSaida">
+                                        <div class="input-container-cad" style="text-decoration: none;">
+                                            <input id="dataSaida" class="input" type="datetime-local" pattern=".+"
+                                                onchange="dtSaida()" required />
+                                            <label class="label" for="dataSaida">Data de saida</label>
+                                        </div>
+
+                                        <div id="msg1"></div>
+
+                                        <div class="input-container-cad">
+                                            <input minlength="5" id="localSaida" class="input" type="text" pattern=".+"
+                                                onchange="locSaida()" required />
+                                            <label class="label" for="localSaida">Local de saida</label>
+                                        </div>
+
+                                        <div id="msg2"></div>
+                                    </div>
+                                    <div class="divChegada">
+
+                                        <div class="input-container-cad">
+                                            <input id="dataChegada" class="input" type="datetime-local" pattern=".+"
+                                                onchange="dtChegada()" required />
+                                            <label class="label" for="dataChegada">Data de chegada</label>
+                                        </div>
+
+                                        <div id="msg3"></div>
+
+                                        <div class="input-container-cad">
+                                            <input minlength="5" id="localChegada" class="input" type="text"
+                                                onchange="locChegada()" pattern=".+" required />
+                                            <label class="label" for="localChegada">Local de chegada</label>
+                                        </div>
+
+                                        <div id="msg4"></div>
+
+                                    </div>
+
+                                    <button class="btn-cadastrar">Cadastrar</button>
+                                </form>
+                            </section>
+                        </div>
+                    </div>
+
+
+
+            </div>
+            <!-- <div class="input-container-cad">
+                <label class="label" for="localSaida">Local de saida</label>
+                <input onkeyup="locsaida()" class="inp" id="localSaida" type="text" class="input"
+                    placeholder="rua: xxxx" pattern=".+" required>
+                <br><br>
+            </div>
+            <div id="validlocsaida">
+
+            </div> -->
+
+    </div>
+
+    </div>
+    </div>
+
+    </div>
+
+    </main>
+
+
+</body>
+
+</html>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        labels: 'true',
+        data: {
+            labels: ['13:58:55', '13:58:55', '13:58:55', '13:58:55', '13:58:55', '13:58:55', '13:58:55', '13:58:55', '13:58:55'],
+            datasets: [{
+
+                data: [-77.5, -77.2, -76.4, -75.8, -72, -70, -71, -76, -75],
+                label: "Variação de temperatura",
+                backgroundColor: [
+                    '#FBC84F',
+
+
+                ],
+                borderColor: [
+                    '#FBC84F'
+
+
+                ],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: false
+                }
+            }
+        }
+    });
+    const config = {
+        type: 'line',
+        data: data,
+        options: {
+            indexAxis: 'y',
+            scales: {
+                y: {
+                    beginAtZero: false
+                }
+            }
+        }
+    };
+
+
+    function numFreezer() {
+        if (nFreezer.value.length > 3 ) {
+            msg.innerHTML = '';
+            nFreezer.style.borderColor = '#f5af0c';
+        } else {
+            msg.innerHTML = '<span style="color: red;">Caracteres insuficientes!</span>';
+            nFreezer.style.borderColor = 'red';
+        }
+    }
+    function dtSaida() { 
+
+        if (new Date(dataSaida.value)) {
+            msg1.innerHTML = ''
+            localSaida.style.borderColor = '#f5af0c'
+        } else {
+            msg2.innerHTML = '<div style="color: red;">É necessário inserir uma data</div>'
+            localSaida.style.borderColor = 'red'  
+        }
+ 
+    }
+
+    function locSaida() {
+        var saida = localSaida.value
+        if (saida.length >5) {
+            msg2.innerHTML = ''
+            localSaida.style.borderColor = '#f5af0c'
+        } else {
+            msg2.innerHTML = '<div style="color: red;">Deve conter mais que 5 digitos</div>'
+            localSaida.style.borderColor = 'red'
+        }
+    }
+    function dtChegada() {
+        var resposta = new Date(dataChegada.value) > new Date(dataSaida.value)
+
+        if (resposta) {
+            msg3.innerHTML = ''
+            dataChegada.style.borderColor = '#f5af0c'
+        } else {
+            msg3.innerHTML = '<div style="color: red;">Data final maior que a inicial </div>'
+            dataChegada.style.borderColor = 'red'
+        }
+    }
+    function locChegada(params) {
+        var chegada = localChegada.value
+        if (chegada.length >5) {
+            msg4.innerHTML = ''
+            localChegada.style.borderColor = '#f5af0c'
+        } else {
+            msg4.innerHTML = '<div style="color: red;">Deve conter mais que 5 digitos</div>'
+            localChegada.style.borderColor = 'red'
+        }
+    }
+</script>

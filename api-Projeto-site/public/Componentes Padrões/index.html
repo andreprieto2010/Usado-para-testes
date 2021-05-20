@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- head padrão em todas as paginas -->
+    <title>Frio Control</title> <!-- titulo da página (aparece na barra do navegador) -->
+        <link rel="icon" href="img/logopng.png"> <!-- icone da página (aparece na barra do navegador) -->
+        <link rel="stylesheet" href="./style.css"> <!-- link da estilização (css) -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> <!-- link das redes sociais do footer -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet"> <!-- link das fontes usadas no site Roboto(titulos) e Poppins(descrições) -->
+    <!-- fim head padrão em todas as paginas -->
+</head>
+<body>
+    <!-- inicio do header -->
+            <nav>
+                <ul class="menu">
+                    <li class="logo"><img src="./img/logopng.png" alt=""></li> <!-- logo do menu -->
+                    <li class="item"><a href="#">Home</a></li> <!-- link que redireciona para a página home -->
+                    <li class="item"><a href="#">Serviços</a></li> <!-- link que redireciona para a página serviços -->
+                    <li class="item"><a href="#">Sobre</a></li> <!-- link que redireciona para a página sobre -->
+                    <li class="item"><a href="#">Contato</a></li> <!-- link que redireciona para a página contato -->
+                    <li class="item button"><a href="#">LOGIN</a></li> <!-- link que redireciona para a página de login (além de conter a mesma estilização dos outros links, este link também possui outra class e foi estilizado de forma que se assemelha a um botão) -->
+                    <li class="item button secondary"><a href="#">CADASTRO</a></li> <!-- link que redireciona para a página de Cadastro (além de conter a mesma estilização dos outros links, este link também possui outra class e foi estilizado de forma que se assemelha a um botão) -->
+                    <li class="toggle"><span class="bars"></span></li> <!-- logo do menu mobile (menu hamburguer) -->
+                </ul>
+            </nav>
+
+            <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+            crossorigin="anonymous"></script>
+            <script>
+            $(function() {
+            $(".toggle").on("click", function() {
+                if ($(".item").hasClass("active")) {
+                    $(".item").removeClass("active");
+                } else {
+                    $(".item").addClass("active");
+                }
+            });
+            });
+            </script>
+    <!-- fim do header -->  
+
+
+
+            <br><br><br> <center>
+
+
+
+
+        <!-- botões padrões -->
+                <h1>Botões Padrões</h1> <br><br><br>
+
+                <button class="btn-padrao verde"> Verde </button>
+
+                <button class="btn-padrao amarelo"> Amarelo </button> 
+
+                <button class="btn-padrao azul"> Azul </button> 
+
+                <button class="btn-padrao marinho"> Marinho </button> 
+
+        <!-- fim botões padrões --> 
+
+
+
+        <br><br><br><br> <hr> <br><br><br><br>
+
+
+
+        <!-- titulo padrão -->
+            <h1 > Titulo padrão </h1> <br><br><br>
+
+            <h1 class="titulo-padrao">Isso é um titulo</h1>
+
+        <!-- fim titulo padrão --> 
+
+
+        <br><br><br><br> <hr> <br><br><br><br>
+
+
+
+        <!-- subtitulo / descricao padrão -->
+            <h1> Subtitulo Padrão </h1> <br><br><br>
+
+            <h3 class="subtitulo-padrao">Isso é um subtitulo</h3>
+        <!-- subtitulo / descricao padrão -->
+
+
+        <br><br><br><br> <hr> <br><br><br><br>
+
+
+        
+        <!-- texto padrão -->
+            <h1> texto padrão </h1> <br><br><br>
+
+            <p class="texto-padrao">texto Padrão que é usado para descrever em textos maiores como na parte de time e sobre, esse é usado após o subtitulo</p>
+            <p class="texto-padrao">   Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p class="texto-padrao">  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+        <!-- texto padrão -->
+
+
+        <br><br><br><br> <hr> <br><br><br><br>
+
+
+        
+        <!-- input padrão -->
+            <h1> input padrão </h1> <br><br><br>
+        </center>
+
+            <form style="margin-left: 42%;">
+                <input required='' type='text'>
+                <label alt='Nome' placeholder='Nome'></label>
+
+                <input required='' type='password'>
+                <label alt='Senha' placeholder='Senha'></label>
+              </form>
+
+        <!-- input padrão -->
+<center>
+        <br><br><br><br> <hr> <br><br><br><br>
+
+        </center>
+
+         <!-- inicio do footer -->
+         <footer class="footer">
+            <div class="container">
+
+                <!-- div responsavel por alinhar as divs que estão no seu interior, lado a lado -->
+                <div class="row"> 
+
+                    <!-- 1° coluna do footer responsavel por apresentar a identidade visual completa da empresa -->
+                    <div class="footer-col"> 
+                        <ul>
+                            <img src="img/logo sem fundo.png" alt="">
+                        </ul>
+                    </div>
+                    <!-- fim da 1° coluna do footer responsavel por apresentar a identidade visual completa da empresa -->
+
+                    <!-- 2° coluna do footer responsavel por apresentar os links das paginas do site institucional -->
+                    <div class="footer-col">
+                        <h4>Início</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Serviços</a></li>
+                            <li><a href="#">Login e Cadastro</a></li>
+                            <li><a href="#">Sobre nós</a></li>
+                        </ul>
+                    </div>
+                    <!-- fim da 2° coluna do footer responsavel por apresentar os links das paginas do site institucional -->
+
+                    <!-- 3° coluna do footer responsavel por apresentar os links dos nossos meios de comunicação -->
+                    <div class="footer-col">
+                        <h4>Suporte</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Telefones</a></li>
+                            <li><a href="#">Email</a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </div>
+                    <!-- fim da 3° coluna do footer responsavel por apresentar os links dos nossos meios de comunicação -->
+
+                     <!-- 4° coluna do footer responsavel por apresentar os links das redes sociais da empresa -->
+                    <div class="footer-col">
+                        <h4>Nossas Redes Sociais</h4>
+                        <div class="social-links"> <!--div responsavel pela estilização e alinhamento dos links/icones das redes sociais -->
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div> <!-- fim da div responsavel pela estilização e alinhamento dos links/icones das redes sociais -->
+                    </div> 
+                    <!-- fim da 4° coluna do footer responsavel por apresentar os links das redes sociais da empresa -->
+
+                </div> <!-- fim da div responsavel por alinhar as divs que estão no seu interior, lado a lado -->
+            </div>
+    </footer>
+</body>
+</html>

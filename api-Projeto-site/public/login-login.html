@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frio Control - Cadastro & Login</title> <!-- titulo da página (aparece na barra do navegador) -->
+  <link rel="icon" href="img/logoNovaReduzida.png"> <!-- icone da página (aparece na barra do navegador) -->
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <title></title>
+</head>
+
+<body>
+
+  <!--Header-->
+
+  <header class="header">
+    <nav class="nav">
+      <ul class="menu">
+        <li class="logo"><img src="./img/logoNovaReduzida.png" alt=""></li> <!-- logo do menu -->
+                <li class="item"><a href="index.html">Home</a></li>
+                <!-- link que redireciona para a página home -->
+                <li class="item"><a href="servicos.html">Serviços</a></li>
+                <!-- link que redireciona para a página serviços -->
+                <li class="item"><a href="sobre.html">Sobre</a></li>
+                <!-- link que redireciona para a página sobre -->
+                <li class="item"><a href="contato.html">Contato</a></li>
+                <!-- link que redireciona para a página contato -->
+                <li class="item button"><a href="login-cadastro.html">LOGIN</a></li>
+                <!-- link que redireciona para a página de login (além de conter a mesma estilização dos outros links, este link também possui outra class e foi estilizado de forma que se assemelha a um botão) -->
+                <li class="item button secondary"><a href="login-cadastro.html">CADASTRO</a></li>
+                <!-- link que redireciona para a página de Cadastro (além de conter a mesma estilização dos outros links, este link também possui outra class e foi estilizado de forma que se assemelha a um botão) -->
+                <li class="toggle"><span class="bars"></span></li> <!-- logo do menu mobile (menu hamburguer) -->
+      </ul>
+    </nav>
+  </header>
+
+  <!-- /header -->
+
+
+  <!--Primeiro fizemos um container, dentro abrimos uma div para ser 
+        o container menor do formulario. em sequencia outra div para o formulario. -->
+  <div class="login-container">
+    <div class="forms-container">
+      <div class="login-cadastro">
+        <!-- Aqui começa o formulario de login -->
+        <form action="#" class="form-login">
+          <h2 class="subtitulo-padrao">Login</h2>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Usuário" required>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Senha" required>
+          </div>
+          <button class="btn-padrao verde">LOGIN</button>
+          <!-- este ultimo input é o botao do login
+                    <input type="submit" value="login" class="btn-solid">  -->
+        </form>
+
+        <!-- Aqui começa o formulário de login do administrador -->
+        <form action="#" class="form-login-adm">
+          <h2 class="subtitulo-padrao">Login</h2>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Usuário" required>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Senha" required>
+          </div>
+          <button class="btn-padrao verde">LOGIN</button>
+          <!-- este ultimo input é o botao do login
+                    <input type="submit" value="login" class="btn-solid">  -->
+        </form>
+
+        
+      </div>
+    </div>
+
+    <!-- lado direito e esquerdo do painel-->
+    <div class="painel-container">
+      <div class="painel painel-esquerdo">
+        <div class="content">
+          <h3 class="subtitulo-padrao">Você é um administrador ?</h3>
+          <p class="texto-padrao">
+            Clique no botão abaixo <br>
+            e entre com seu login para <br>
+            monitorar a sua empresa
+          </p>
+          
+          <button class="btn-padrao verde" id="btn-cadastrar">
+            Entrar
+          </button>
+        </div>
+        <img src="img/File bundle-rafiki.png" class="image" alt="" />
+      </div>
+      <!-- lado direito do painel-->
+      <div class="painel painel-direito">
+        <div class="content">
+          <h3 class="subtitulo-padrao">É um funcionário ?</h3>
+          <p class="texto-padrao">
+            Bem vindo de volta! <br>
+            Entre com a sua conta para acompanhar e
+            monitorar os seus freezers
+          </p>
+          <button class="btn-padrao verde" id="btn-entrar">
+            Entrar
+          </button>
+        </div>
+        <img src="img/Design stats-rafiki.png" class="image" alt="" />
+      </div>
+    </div>
+  </div>
+
+
+  <!-- inicio do footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <ul>
+            <img src="img/LogoNovaBranco.png" alt="">
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Início</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Login e Cadastro</a></li>
+            <li><a href="#">Sobre nós</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Suporte</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Telefones</a></li>
+            <li><a href="#">Email</a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Nossas Redes Sociais</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- links do header-->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+
+  <!--estamos linkando esse html ao js-->
+  <script src="anime.js"></script>
+</body>
+</html>
+     <!--mobile e web-->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+<script>
+ 

@@ -1,0 +1,323 @@
+body, html {
+	height: 100%;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .conteudo-home {
+	margin: 3rem auto;
+    padding: 3em; 
+    align-items: center;
+ }
+
+ /* banner */
+  
+  .banner-sobre-image {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/banner-sobre.png");
+	height: 27%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+  }
+  .banner-sobre-text {
+	text-align: initial;
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+  }
+
+   /* inicio da padronização do titulo */
+   .titulo-padrao{
+	font-size: 3rem;
+	font-weight: 600;
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	cursor: default;
+}
+
+.titulo-padrao{
+	color: rgba(0, 0, 0, 0.733);
+	transition: color 0.3s ease-in-out;
+}
+
+.titulo-padrao:before{
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 3px;
+	bottom: 0;
+	left: 0;
+	transition: width, background-color, 0.3s ease-in-out;
+}
+
+.titulo-padrao:hover{
+	color: #000000be;
+}
+
+.titulo-padrao:before{
+	width: 100px;
+	background-color:#00959C ;
+}
+
+.titulo-padrao:hover:before{
+	width: 100%;
+	background-color:#00959C ;
+}
+
+/* fim da padronização do titulo */
+  
+/* inicio da padronização de subtitulos (ex: missão, visão e valores) */
+.subtitulo-padrao{
+	color:  rgba(0, 0, 0, 0.733);
+	font-family: 'Roboto', sans-serif;
+	font-size: 2rem;
+}
+
+/* fim da padronização de subtitulos (ex: missão, visão e valores) */
+
+
+/* inicio da padronização de textos corridos */
+.texto-padrao{
+	color: rgba(0, 0, 0, 0.562);
+	font-family: 'Poppins', sans-serif;
+	font-size: 1rem;
+	letter-spacing: 1px;
+	line-height: 30px;
+}
+/* fim da padronização de textos corridos */
+
+.banner-sobre-text h1{
+	color: rgba(255, 255, 255, 0.863);
+}
+
+.banner-sobre-text h1:hover{
+	color: rgb(255, 255, 255);
+}
+
+.banner-sobre-text p{
+	color: rgba(255, 255, 255, 0.829);
+}
+
+	/* fim banner */
+
+ 	/* inicio sobre */
+
+  .content-conteudo-sobre {
+	display: flex;
+	flex-wrap: wrap;
+  }
+  
+  .content-conteudo-sobre > *:nth-child(1) {
+	flex: 1 1 45%;
+	min-width: 25ch;
+  }
+
+  .content-conteudo-sobre > *:nth-child(1) img {
+	max-width: 100%;
+  }
+  
+  .content-conteudo-sobre> *:nth-child(2) {
+	flex: 1 1 55%;
+	min-width: 15ch;
+	align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  
+  *,
+  *::before,
+  *::after {
+	box-sizing: border-box;
+  }
+ 
+  .flow-sobre > * + * {
+	margin-top: var(--flow-space, var(--spacer));
+  }
+  
+  .content-sobre {
+	width: 100%;
+	padding: 7em;
+
+  }
+  
+  .col-sobre {
+	padding: 1em;
+
+  }
+  
+
+  /* descricao sobre */
+
+.column-descricao {
+	flex-direction: column;
+}
+
+
+/* Flex Container */
+.container-descricao {
+	max-width: 100%;
+	margin: 0 auto;
+	display: flex;
+
+}
+/* Flex Item */
+.item-descricao {
+	/* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
+	flex: 1;
+	margin: 3px;
+	margin-bottom: 15px;
+	text-align: initial;
+	font-size: 1.5em;
+}
+
+
+
+/* banner */
+/* banner */
+.banner-section {
+	padding: 70px 150px;
+	text-align: initial;
+	background-color: #242424;
+  }
+  
+.banner-section h1{
+	color: rgba(255, 255, 255, 0.863);
+}
+
+.banner-section h1:hover{
+	color: rgb(255, 255, 255);
+}
+
+.banner-section p{
+	color: rgba(255, 255, 255, 0.829);
+}
+
+  
+  /* fim banner */
+/* fim banner */
+
+
+/* inicio sobre */
+
+.content-conteudo-time {
+	display: flex;
+	flex-wrap: wrap;
+  }
+  
+  .content-conteudo-time > *:nth-child(1) {
+	flex: 1 1 70%;
+	min-width: 25ch;
+  }
+  
+  .content-conteudo-time> *:nth-child(2) {
+	flex: 1 1 30%;
+	min-width: 15ch;
+	padding: 4em;
+  }
+  
+
+ 
+  .flow-time > * + * {
+	margin-top: var(--flow-space, var(--spacer));
+  }
+  
+  .content-time {
+	width: 100%;
+	padding: 2em;
+	box-shadow: 0 0 3em rgba(0,0,0,.15);
+	background: white;
+  }
+  
+  .col-time {
+	padding: 1em;
+
+  }
+
+
+  
+/* fotos time */
+* {
+	box-sizing: border-box;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column-ftstime {
+	float: left;
+	width: 33.33%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 5px;
+	height: 300px; /* Should be removed. Only for demonstration */
+	margin-bottom: 5px;
+  }
+  
+  /* Clear floats after the columns */
+  .row-ftstime:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+	.column-ftstime {
+	  width: 100%;
+	}
+  }
+
+
+
+  .container-cardfts {
+	position: relative;
+	width: 50%;
+  }
+  
+  .image-cardfts {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 5px;
+	margin-bottom: 5px;
+  }
+  
+  .overlay-cardfts {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #00959B;
+	overflow: hidden;
+	width: 100%;
+	height: 0;
+	transition: .5s ease;
+  }
+  
+  .container-cardfts:hover .overlay-cardfts {
+	height: 50%;
+  }
+  
+  .text-cardfts {
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+  }
+
+  .container-cardfts img{
+	width: 100%;
+  }

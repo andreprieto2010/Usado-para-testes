@@ -1,0 +1,102 @@
+.box-crud {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.content-table {
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px 2px #ccc;
+  background-color: #fff;
+  margin-top: 45px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  height: auto;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #c4c4c477;
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgb(255, 255, 255);
+}
+
+body {
+  font-family: Verdana;
+}
+
+table {
+  width: 100%;
+}
+
+thead tr {
+  background-color: #fbc74f;
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: center;
+}
+
+th {
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+
+/*lixinho e lapis*/
+
+.icones {
+  width: 90px;
+}
+
+.box-table {
+  display: flex;
+  float: inline-start;
+  padding: 5px;
+}
+
+.update-crud {
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  border: none;
+  background-color: #116080;
+  margin-right: 5px;
+  cursor: pointer;
+  padding-top: 10px;
+}
+
+.fa-pencil-alt {
+  width: 40px;
+  color: white;
+}
+
+.update-crud:hover {
+  background-color: #0a3d52;
+}
+
+.delet-crud {
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  border: none;
+  background-color: #FF4F4F;
+  margin-left: 15px;
+  cursor: pointer;
+  padding-top: 10px;
+}
+
+.delet-crud i {
+  width: 40px;
+  color: white;
+}
+
+.delet-crud:hover {
+  background-color: #cf2525;}

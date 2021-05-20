@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Frio Control - Home</title> <!-- titulo da página (aparece na barra do navegador) -->
+        <link rel="icon" href="img/logoNovaReduzida.png"> <!-- icone da página (aparece na barra do navegador) -->
+        <link rel="stylesheet" href="css/footer.css"> <!-- link da estilização (css) do footer -->
+        <link rel="stylesheet" href="css/navbar.css"> <!-- link da estilização (css) do menu / navbar -->
+        <link rel="stylesheet" href="css/stylehome.css"> <!-- link da estilização (css) do conteudo da página home -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> <!-- link das redes sociais do footer -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet"> <!-- link das fontes usadas no site Roboto(titulos) e Poppins(descrições) -->
+    </head>
+
+    <body> <!-- inicio do corpo da página -->
+
+        <!-- inicio do header -->
+        <header class="header">
+            <nav class="nav">
+                <ul class="menu">
+                    <li class="logo"><img src="./img/logoNovaReduzida.png" alt=""></li> <!-- logo do menu -->
+                    <li class="item link-ativo"><a href="index.html">Home</a></li>
+                    <!-- link que redireciona para a página home -->
+                    <li class="item"><a href="servicos.html">Serviços</a></li>
+                    <!-- link que redireciona para a página serviços -->
+                    <li class="item"><a href="sobre.html">Sobre</a></li>
+                    <!-- link que redireciona para a página sobre -->
+                    <li class="item"><a href="contato.html">Contato</a></li>
+                    <!-- link que redireciona para a página contato -->
+                    <li class="item button"><a href="login-cadastro.html">LOGIN</a></li>
+                    <!-- link que redireciona para a página de login (além de conter a mesma estilização dos outros links, este link também possui outra class e foi estilizado de forma que se assemelha a um botão) -->
+                    <li class="item button secondary"><a href="login-cadastro.html">CADASTRO</a></li>
+                    <!-- link que redireciona para a página de Cadastro (além de conter a mesma estilização dos outros links, este link também possui outra class e foi estilizado de forma que se assemelha a um botão) -->
+                    <li class="toggle"><span class="bars"></span></li> <!-- logo do menu mobile (menu hamburguer) -->
+                </ul>
+            </nav>
+        </header>
+        <!-- fim do header -->
+
+
+    <!-- conteudo da página home -->
+
+    <!-- introdução -->
+
+    <!-- div responsavel por definir o tamanho da tela que será usado e suas especificações (margin / padding) -->
+    <div class="conteudo-home"> 
+
+        <!-- div responsavel por dividir a tela em duas partes -->
+        <div class="container-home"> 
+
+            <!-- div responsavel por manter o conteudo iniciando a esquerda -->
+            <div> 
+
+                <!-- div responsavel por manter os itens centralizados no eixo Y -->
+                <div> 
+
+                    <!-- titulo da página home -->
+                    <h1 class="titulo-padrao">Você um passo a frente</h1>
+
+                    <!-- descrição da página home -->
+                    <p class="texto-padrao">Visamos dinamizar o controle no armazenamento de artefatos 
+                        <br> conservados  em temperaturas especificas. <br>
+                    Seja muito bem vindo a FrioControl!</p> 
+
+                    <!-- botões -->
+                    <button class="btn-padrao verde"> Simulador </button> <button class="btn-padrao amarelo"> Planos </button> 
+
+                <!-- fim da div responsavel por manter os itens centralizados no eixo Y -->
+                </div> 
+
+            <!-- fim da div responsavel por manter o conteudo iniciando a esquerda -->
+            </div> 
+
+            <!-- div responsavel pela 2° metade da tela -->
+            <div> 
+
+                <!-- animação da pagina home -->
+                <img src="img/img-home.png" alt=""> 
+
+            <!-- fim da div responsavel pela 2° metade da tela -->
+            </div> 
+
+        <!-- fim da div responsavel por dividir a tela em duas partes -->
+        </div> 
+
+    <!-- fim da div responsavel por definir o tamanho da tela que será usado e suas especificações (margin / padding) -->
+    </div> 
+    <!-- fim da introducao -->
+
+    <!-- banner -->
+    <div class="banner-section">
+        <h1 class="subtitulo-padrao">Planos</h1>
+        <p class="texto-padrao">Confira nossos planos para o sucesso de sua empresa com nossa tecnologia!</p>
+    </div>
+    <!-- fim banner -->
+
+    <!-- inicio planos -->
+
+    <!-- div responsavel por definir o tamanho da tela que será usado e suas especificações (margin / padding) -->
+    <div class="conteudo-home planos-container">         
+        <!-- div responsavel pelos blocos de planos -->
+        <div class="cards-planos">
+            <div class="card-planos shadow-planos">
+            <ul>
+                <li class="pack-planos">Básico</li>
+                <li id="basic" class="price-planos bottom-bar">R$ 1.100</li>
+                <li class="bottom-bar">2 visitas técnicas</li>
+                <li class="bottom-bar">Monitoramento</li>
+                <li class="bottom-bar">Mensal</li>
+                <li><button class="btn-padrao verde">Comprar</button></li>
+            </ul>
+            </div>
+            <div class="card-planos active-planos">
+            <ul>
+                <li class="pack-planos">Premium</li>
+                <li id="professional-planos" class="price-planos bottom-bar">R$ 8.100</li>
+                <li class="bottom-bar">Visitas técnicas ilimitadas</li>
+                <li class="bottom-bar">Monitoramento</li>
+                <li class="bottom-bar">Anual</li>
+                <li><button class="btn-padrao active-btn">Comprar</button></li>
+            </ul>
+            </div>
+            <div class="card-planos shadow-planos">
+            <ul>
+                <li class="pack-planos">Master</li>
+                <li id="master" class="price-planos bottom-bar">R$ 4.500</li>
+                <li class="bottom-bar">15 visitas técnicas</li>
+                <li class="bottom-bar">Monitoramento</li>
+                <li class="bottom-bar">Semestral</li>
+                <li><button class="btn-padrao verde">Comprar</button></li>
+            </ul>
+            </div>
+        </div>
+        <!-- div responsavel pelos blocos de planos -->
+    </div>
+    <!-- div responsavel por definir o tamanho da tela que será usado e suas especificações (margin / padding) -->
+    
+<!-- fim planos -->
+
+
+    <!-- inicio simulador -->
+
+        <!-- div responsavel por definir o tamanho da tela que será usado e suas especificações (margin / padding) -->
+        <div class="conteudo-home planos-container">       
+            <div class="container-simulador flow-simulador">
+                <div class="content-simulador">
+                  <div class="col-simulador">
+                      <h2 class="subtitulo-padrao">Veja o quanto você pode economizar adquirindo nosso sistema</h2>
+                      <p class="texto-padrao">Simule seu financiamento aqui conosco!</p>
+                      <p class="texto-padrao">Descubra quanto você pode economizar adquirindo um dos nossos serviços!</p>
+                  </div>
+                  <div class="col-simulador">
+                      <div class="simulador-div">
+                          <form action="">
+
+                            <input required='' type='text' id="valor_unidade_inp">
+                            <label alt='Insira por valor por unidade' placeholder='Insira por valor por unidade'></label>
+
+                            <input required='' type='text' id="numero_perdas_inp">
+                            <label alt='Insira o numero de perdas por mês' placeholder='Insira o numero de perdas por mês'></label>
+
+                            <input required='' list="planos_opt" id="plano_inp">
+                            <label alt='Insira o plano que deseja' placeholder='Insira o plano que deseja'></label>
+            
+                            <datalist id="planos_opt">
+                                <option value="Premium">Premium</option>
+                                <option value="Master">Master</option>
+                                <option value="Básico">Básico</option>
+                            </datalist>
+                              
+                              <button class="btn-padrao marinho" onclick="calcular()">Calcular</button>
+                          </form>
+                      </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <!-- div responsavel por definir o tamanho da tela que será usado e suas especificações (margin / padding) -->
+
+        <!-- fim simulador -->
+
+    <!-- fim do conteudo da página home -->
+
+
+    <!-- inicio do footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <ul>
+                        <img src="img/LogoNovaBranco.png" alt="">
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Início</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Serviços</a></li>
+                        <li><a href="#">Login e Cadastro</a></li>
+                        <li><a href="#">Sobre nós</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Telefones</a></li>
+                        <li><a href="#">Email</a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Nossas Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </footer>
+    
+</body> <!-- fim do corpo da página -->
+</html>
+
+ <!-- javascript do menu (responsavel por "ativar o menu mobile e desativar o menu web") -->
+ <script>
+    window.onload = function(e) {
+    var offset = document.getElementsByClassName('header')[0].offsetTop;
+    var menu = document.getElementsByClassName('header')[0];
+
+    document.addEventListener('scroll', function() {
+        if (document.body.scrollTop > offset || document.documentElement.scrollTop > offset) {
+            menu.style.position = 'fixed';
+        } else {
+            menu.style.position = 'initial';
+        }
+    });
+}
+</script>
+<script
+src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+crossorigin="anonymous"></script>
+<script>
+$(function() {
+$(".toggle").on("click", function() {
+    if ($(".item").hasClass("active")) {
+        $(".item").removeClass("active");
+    } else {
+        $(".item").addClass("active");
+    }
+});
+});
+
+</script>
+
+<!-- calculadora -->
+
+<script>
+    function calcular(){
+        var valor_unidade = Number(valor_unidade_inp.value);
+        var numero_perdas = Number(numero_perdas_inp.value);
+        var prejuizo;
+        prejuizo = valor_unidade * numero_perdas;
+
+        alert(`Você pode econimizar em média ${prejuizo} adquirindo o nosso sistema`)
+    }
+</script>
+

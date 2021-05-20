@@ -1,0 +1,610 @@
+body{
+    background-color: #f1f5f9;
+}
+
+main {
+    margin-top: 90px;
+    padding: 2rem 1.5rem;
+    min-height: calc(100vh - 90px);
+    background-color: #f1f5f9;
+    height: 800;
+   
+   
+}
+
+
+
+/* Responsividade */
+@media only screen and (max-width: 1200px) {
+    /* Mesmas config de quando esconde o menu*/
+.sidebar {
+    width: 100px;
+}
+.sidebar li a span {
+    display: none;
+}
+.sidebar .sidebar-marca .sidebar-logo img {
+    display: none;
+}
+.sidebar .sidebar-marca .sidebar-logo-reduzido img {
+    display: block;
+}
+
+.header-dashboard {
+    margin-left: 100px;
+}
+
+.header-dashboard header {
+    width: calc(100% - 100px);
+    left: 100px;
+}
+}
+
+
+
+/*Container pai e cards */
+
+
+.conteudo-principal {
+    margin-left: 345px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+    padding: 2rem 2rem 2rem 2rem;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 2px #ccc;
+}
+
+.align-items{
+    display: flex;
+    justify-content: start;
+}
+
+.card h1 {
+    font-size: 3rem;
+    position: relative;
+    right: 40px;
+}
+
+.card p {
+    font-size: 1rem;
+    position: relative;
+    right: 40px;
+}
+
+/* Estilizando imagem do card */
+.card div img {
+    height: 64px; 
+}
+
+
+.container-graficos {
+    margin-top: 40px;
+    width: 100%;
+    height: 600px;
+    background-color: #f1f5f9;
+}
+
+
+
+
+.caixa-pesquisa {
+    width: 100%;
+    height: 80px;
+    background-color: #f1f5f9;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/*Barra de pesquisa*/
+.pesquisa-inp {
+    height: 60px;
+    width: 90%;
+    border-radius: 20px;
+   
+}
+
+ .icone-pesquisa {
+    position: relative;
+    left: 40px;
+    
+}
+
+::-webkit-input-placeholder  {
+    color: rgb(76, 71, 71);
+    font-size: 15px;
+    position: relative;
+    left: 50px;
+ }
+
+ /* /Barra de pesquisa*/
+
+/* Grafico vendas*/
+
+.content-sidebar-chart {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .content-sidebar-chart > *:nth-child(1) {
+    flex: 1 1 67%;
+    min-width: 25ch;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  .content-chart-select{
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 2px #ccc;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 900px;
+
+    
+  }
+  
+  .content-sidebar-chart > *:nth-child(2) {
+    flex: 1 1 33%;
+    min-width: 15ch;
+  }
+
+  .flow-chart > * + * {
+    margin-top: var(--flow-space, var(--spacer));
+  }
+
+  .content-chart {
+    width: 100%;
+    margin: 3rem auto;
+  }
+
+  .col-chart {
+    padding: 0.5em;
+    
+  }
+
+  .content-table{
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 2px #ccc;
+    background-color: #fff;
+    padding: 10px;
+  }
+
+ 
+
+  .logo-card {
+      float: left;
+      display: flex;
+      position: relative;
+      left: 80px;
+      bottom: 50px;
+      margin: 0;
+      padding: 0;
+  }
+
+  .card h1 {
+      position: relative;
+      top: 30px;
+  }
+
+  .card p {
+    position: relative;
+    top: 30px;
+}
+
+
+
+  /* Grafico Usuarios--> */
+
+
+  .container-usuario {
+      position: relative;
+      top: 40px;
+      left: 40px;
+      width: 445px;
+      height: 300px;
+      border-radius: 5px;
+      background-color: #fff;
+      margin-top: 80px;
+       box-shadow: 3px 3px 5px 2px #ccc;
+  }
+
+
+  .caixa-conteudo {
+   height: 350px;
+   width: 400px;
+
+  }
+
+.container-usuario .btn-padrao {
+    height: 40px;
+    width: 100px;
+    position: relative;
+    right: 20px;
+}
+
+
+
+ /* Grafico Empresas--> */
+
+.container-empresa {
+    position: relative;
+    bottom: 270px;
+    left: 500px;
+    width: 445px;
+    height: 320px;
+    float: left;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 3px 3px 5px 2px #ccc;
+  
+}
+
+
+.container-empresa .btn-padrao {
+    height: 40px;
+    width: 100px;
+    position: relative;
+    right: 20px;
+}
+
+
+/*Padrao */
+
+  .subtitulo-padrao {
+    color: rgba(0, 0, 0, 0.733);
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+.btn-padrao {
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    height: 50px;
+    text-align: center;
+    width: 150px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    text-shadow: 0;
+    font-size: 12px;
+    font-weight: bold;
+    border: #ffffff00;
+    cursor: pointer;
+}
+
+.verde {
+    background: #03313D;
+    color: white;
+    border: #00959C;
+}
+
+.verde:hover {
+    background: #ffffff;
+    color: #03313D;
+    border: 2px solid #03313D;
+  }
+
+  .posicao-btn{
+      position: absolute;
+      margin-top: -20px;
+      margin-left: 25px;
+  }
+
+
+  
+
+  /*****************************************************************  inicio cards  ************************************************************************/
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+}
+
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 2px #ccc
+}
+
+img {
+
+    height: 20px;
+}
+
+.align-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc-count{
+  margin-right: 100px;
+  margin-bottom: 50px;
+
+}
+
+.desc-count p{
+   position: relative; 
+   left: 60px;
+  }
+
+/* Estilizando imagem do card */
+.card div img {
+    height: 64px; 
+}
+
+.count{
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  position: relative;
+  text-decoration: none;
+  cursor: default;
+  color: rgba(0, 0, 0, 0.726) ;
+  position: relative;
+  left: 55px;
+  bottom: 80px;
+
+}
+
+
+
+/***********************************************************************  fim cards  ******************************************************************/
+
+
+
+.caixa-pesquisa {
+    width: 100%;
+    height: 80px;
+    background-color: #f1f5f9;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+
+/****************************************************************** inicio style barra busca **********************************************************/
+.barra-navegacao-home{
+    margin-top: 30px;
+    height: 75px;
+    display: flex;
+  }
+  
+  .barra-busca-home{
+    background-color: white;
+    width: 100%;
+    height: 75px;
+    box-shadow: 3px 3px 5px 2px #ccc;
+    border-radius: 5px;
+    display: flex;
+  }
+  
+  .select-busca-home{
+    background-color: white;
+    width: 30%;
+    height: 75px;
+    box-shadow: 3px 3px 5px 2px #ccc;
+    border-radius: 5px;
+  }
+  
+  .search-wrapper2 {
+    width: 100%;
+    border-radius: 5px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  
+  .search-wrapper2 span {
+    display: inline-block;
+    padding: 0rem 1rem;
+    font-size: 1.5rem;
+    margin-right: 100px;
+  }
+  
+  .search-wrapper2 input {
+    height: 100%;
+    padding: .5rem;
+    border: none;
+    outline: none;
+    width: 95%;
+  }
+  
+  .select-pers{
+    width: 80%;
+  }
+  
+  .select {
+    align-items: center;
+  }
+  
+  .flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } 
+  
+  /* Resetando o Select */
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #ffffff;
+    background-image: none;
+  }
+  
+  select::-ms-expand {
+    display: none;
+  }
+  
+  .select {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    margin: 10px;
+    padding: 10px;
+    line-height: 3;
+    background: #ffffff;
+    overflow: hidden;
+    border-radius: .25em;
+  }
+  select {
+    flex: 1;
+    padding: 0 .5em;
+    color: rgb(34, 32, 32);
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    margin-right: 10px;
+    background: #ffffff;
+    border-radius: 50px;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+    color: #0F969D;
+  }
+  
+  .select:hover::after {
+    color: #0a6166;
+  }
+  
+  .tam-select{
+    width: 100%;
+  }
+
+
+  
+  .icone-pesquisa {
+             position: relative;
+            left: 100px;
+  }
+  
+
+
+
+
+/*Barra de pesquisa*/
+.pesquisa-inp {
+    height: 60px;
+    width: 90%;
+    border-radius: 20px;
+   
+}
+
+ .icone-pesquisa {
+    position: relative;
+    left: 40px;
+    
+}
+
+::-webkit-input-placeholder  {
+    color: rgb(76, 71, 71);
+    font-size: 15px;
+    position: relative;
+    left: 50px;
+ }
+
+ /* /Barra de pesquisa*/
+
+
+
+
+
+
+/******************************************************************* inicio style gráfico   **********************************************************/
+.grafico-analise{
+    margin-top: 40px;
+    background-color: white;
+    box-shadow: 3px 3px 5px 2px #ccc;
+    border-radius: 5px;
+    height: 600px;
+    width: 100%;
+  }
+  
+  .grafico-analise1{
+    margin-top: 10px;
+    height: 85%;
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+  }
+  
+  .centralizando{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .infos-grafico{
+    padding-top: 35px;
+    padding-left: 30px;
+  
+  }
+  
+  .desc-grafico{
+    width: 100%;
+    height: auto;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .desc-grafico p{
+    font-size: 17px;
+  }
+  
+  .desc-marinho{
+    background: #03313d57;
+  }
+  
+  .desc-amarelo{
+    background: #fbc74f54;
+  }
+  
+  .desc-verde{
+    background-color: #00949c54;
+  }
+  
+  /******************************************************************* fim style gráfico   **********************************************************/
+
+ 
